@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/REC-html401/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="pragma" content="no-cache"><meta http-equiv="cache-control" content="no-cache">
+<title>CSPSAT2</title><link rel="stylesheet" type="text/css" href="cspsat2.css"></head>
+<body>
+
+<div class="contents">
+<h1 class="top"><a href="cspsat2.html"><img src="cspsat_logo.png" alt="CSPSAT2" border="0" width="260px"></a></h1>
+
+<table class="mini">
+<tr>
+  <td colspan="3" align="right">
+<script language="JavaScript">
+<!--
+document.writeln('Last modified by Soh at ' + document.lastModified);
+// -->
+</script>
+</td>
+</tr>
+<tr>
+<td width="100px"></td>
+<td class="mini"><a href="en/project.html">English</a> | Japanese</a></td>
+<td class="button"><a href="cspsat.html">CSPSAT<br>(until FY2011)</a></td>
+</tr>
+</table>
+
+<table class="menu" border="0" cellspacing="5" cellpadding="0" width="800px">
+<tr>
+  <td class="menu" bgcolor="#3B5998"><a href="cspsat2.html">ニュース</a></td>
+  <td class="menu" bgcolor="#3B5998"><a href="project.html">プロジェクト概要</a></td>
+  <td class="menu" bgcolor="#3B5998"><a href="mtgsem.html">講演会<br>＆研究会</a></td>
+  <td class="menu" bgcolor="#3B5998"><a href="accomp.html">研究成果物<br>(論文・ソフトウェア等)</a></td>
+</tr>
+</table>
+
+<h2>プロジェクト概要</h2>
+<p>
+近年，高性能な推論を必要とする種々の分野において，命題論理の推論手法で
+あるSAT技術の利用が大きな成功を収めている．本プロジェクト（<b>CSPSAT2</b>）の前身である<a href="cspsat.html">CSPSATプロジェクト</a>ではSAT技術を制約充足問題に適用する研究を進め，<b>世界最高速の制約プログラミングシステム</b>を実現するなど世界トップクラスの研究成果を得た．本プロジェクトは，このSAT型制約プログラミングシステムの研究開発を発展させ，ソフト制約への対応，動的な制約の追加・削除への対応，実数ドメイン上や記号ドメイン上の制約への対応などを行い，高性能かつ柔軟な制約プログラミングシステムを実現するものであり，既存SAT技術では解くことが困難あるいは不可能だった応用に対し高性能な推論基盤を提供することが目的である．この意味で，本プロジェクトは<b>SATおよび制約プログラミングに関する技術を大きく発展させる</b>ものと位置づけられる．<p>
+</p>
+<h3>背景</h3>
+<!-- <p> -->
+<!-- (SAT技術の成功) 命題論理の充足可能性判定問題であるSATは，1960年代のDavisらによる解法 -->
+<!-- アルゴリズムの提案，1970年のCookによるNP完全性の証明など，計算機科学の中心的課題であっ -->
+<!-- た．また，SATを解くアルゴリズムおよびそれを実装したソルバーに関して，半世紀前からこれまで -->
+<!-- に膨大な量の研究がなされてきた．こうした多くの努力が結実し，最近の十数年でSATソルバーの性 -->
+<!-- 能は飛躍的に向上した．特に，SATソルバーの性能を競争する国際的な競技会が毎年開催され，SAT -->
+<!-- ソルバーの性能向上に寄与している．このようなSATソルバーの性能向上を背景として，現在では， -->
+<!-- システム検証，プランニング，定理証明などの数多くの問題に対し，SATは推論の基盤技術として広 -->
+<!-- く利用され，国内外の大学や企業で活発に研究・応用が進められており，CPUの演算回路の検証など -->
+<!-- に実際的に用いられている．また，ERATO湊プロジェクトで中心的研究課題となっているBDDお -->
+<!-- よびZDDも，SATとは補間的ではあるが，命題論理に対する推論技術の研究開発の重要性を示して -->
+<!-- いる． -->
+<!-- </p> -->
+<p>
+制約充足問題および制約最適化問題（以下まとめてCSPと呼ぶ） は，与えられた制約条件を満たす解あるいは最適解を探索する問題である．<b>制約プログラミングシステム</b>は，CSPの記述言語（制約モデリング言語）およびそれを求解するソルバー（制約ソルバー）からなるソフトウェアシステムである．制約プログラミング（CP）システムは，国内での研究開発は活発ではないが，欧米を中心として様々な産業分野に応用されている．例えば，サッカーのJリーグの対戦スケジュールは，IBM社のILOGCP上で開発されている．<a href="cspsat.html">CSPSATプロジェクト</a>ではSAT技術を用いたSAT型制約プログラミングシステムである<a href="http://bach.istc.kobe-u.ac.jp/sugar/">Sugar</a>を開発し，後述のように既存の制約プログラミングシステムを凌ぐ<b>世界最高速の性能</b>を得た．Sugarは，与えられたCSPをSATに符号化（encode）した後，高速なSATソルバーを用いて解を探索し，SATソルバーの解から元のCSPの解を得る方法を用いている．Sugarに代表されるSAT型制約プログラミングシステムは，SAT技術の発展に裏付けられ，CSPの求解に関して高い性能を実現しているが，<b>以下のような限界も存在していた</b>．
+<dl>
+  <dt>
+    <dd>フレキシブル制約への対応: 必ずしも満たさなくて良いソフト制約への対応が不十分である．
+    <dd>動的な制約変更への対応: 動的な制約の追加や削除への対応がなされていない．
+    <dd>ドメインの拡張: 実数や記号等の整数以外のドメインへの対応がなされていない．
+  </dt>
+</dl>
+</p>
+
+<h3>具体的な研究テーマ (予定)</h3>
+<p>
+上記に挙げたSAT型制約プログラミングシステムの限界を乗り越える
+ために，本プロジェクトでは以下の研究テーマに取り組む．
+<dl>
+  <dt>A．フレキシブル制約への対応
+    <dd>Max-CSP の SAT 符号化
+    <dd>重み付き CSP の SAT 符号化
+    <dd>インクリメンタル解法の導入
+  <dt>B．動的制約変更への対応
+    <dd>制約の追加・削除への対応
+    <dd>インクリメンタル解法の導入
+  <dt>C．ドメインの拡張
+    <dd>実数ドメイン
+    <dd>記号ドメイン
+  <dt>D．応用
+    <dd>混合整数計画問題 (MIP)
+    <dd>システム検証
+    <dd>プランニング問題
+    <dd>スケジューリング問題
+    <dd>システム生物学
+</dl>
+</p>
+
+<h3>学術的な特色</h3>
+<p>
+SAT技術は既に推論基盤として広く利用され，国内外の大学や企業で活発に研究・応用が進められている．
+<a href="cspsat.html">CSPSATプロジェクト</a>では，これらのSAT技術の発展を背景としてSAT型制約プログラミングシステムの開発を行い，既存のものを超える世界最高速の制約プログラミングシステムを実現した．本研究は，このSAT型制約プログラミングシステムの研究開発を発展させ，ソフト制約への対応，動的な制約の追加・削除への対応，実数ドメイン上や記号ドメイン上の制約への対応などを行い，高性能かつ柔軟な制約プログラミングシステムを実現するものであり，<b>既存SAT技術では解くことが困難あるいは不可能だった応用に対し高性能な推論基盤を提供する</b>ことが可能となる．たとえば，ソフト制約への対応，動的な制約の追加・削除への対応，実数上の制約への対応などである．この意味で，本プロジェクトは<b>SATおよび制約プログラミングに関する技術を大きく発展させる</b>ものと位置づけられる．また，制約プログラミングシステムは，すでに多くの実際的な応用が存在し，開発したシステムの産業界等での利用が期待できる．
+</p>
+
+<h2>メンバー (順不同)</h2>
+
+<table class="member" border="0" cellspacing="0" cellpadding="0" width="800px">
+<tr>
+<td width="120px"><a href="http://bach.istc.kobe-u.ac.jp/tamura-jp.html">田村直之</a></td>
+<td width="100px">研究代表者</td>
+<td width="560px">神戸大学・情報基盤センター・教授</td>
+</tr>
+<tr>
+<td width="120px"><a href="http://research.nii.ac.jp/~inoue/">井上克巳</a></td>
+<td width="100px">研究分担者</td>
+<td width="560px">国立情報学研究所・情報学プリンシプル研究系・教授</td>
+</tr>
+<tr>
+<td width="120px"><a href="http://kaminari.istc.kobe-u.ac.jp/banbara-jp.html">番原睦則</a></td>
+<td width="100px">研究分担者</td>
+<td width="560px">神戸大学・情報基盤センター・准教授</td>
+</tr>
+<tr>
+<td width="120px"><a href="http://www.nabelab.org/">鍋島英知</a></td>
+<td width="100px">研究分担者</td>
+<td width="560px">山梨大学・医学工学総合研究部・准教授</td>
+</tr>
+<tr>
+<td width="120px"><a href="http://kix.istc.kobe-u.ac.jp/~soh/jp/">宋剛秀</a></td>
+<td width="100px">研究分担者</td>
+<td width="560px">神戸大学・情報基盤センター・助教</td>
+</tr>
+<tr>
+<td width="120px"><a href="http://accafe.jp/tenda/index.php?日本語">沖本天太</a></td>
+<td width="100px">連携研究者</td>
+<td width="560px">神戸大学大学院・海事科学研究科</td>
+</tr>
+<tr>
+<tr>
+<td width="120px">丹生智也</td>
+<td width="100px">連携研究者</td>
+<td width="560px">新領域融合研究センター・融合プロジェクト特任研究員</td>
+</tr>
+<tr>
+<td width="120px"><a href="http://www.lri.fr/~simon/">Laurent Simon</a></td>
+<td width="100px">研究協力者</td>
+<td width="560px">LRI, University Paris 11, Associate Professor</td>
+</tr>
+</table>
+</p>
+
+<h2>研究資金</h2>
+<p>
+<dl>
+  <dt>科学研究費補助金 基盤研究(B)
+    <dd>研究課題名：命題論理の推論技術を用いた高性能かつ柔軟な制約プログラミングシステムの実現
+    <dd>研究期間：2012年度 〜 2014年度
+    <dd>課題番号：24300007
+<!--     <dd>研究代表者：田村直之 -->
+<!--     <dd>研究分担者：井上克巳，番原睦則，鍋島英知，宋剛秀 -->
+</dl>
+</p>
+
+
+<h2>その他</h2>
+<p>
+<a href="https://www.edu.kobe-u.ac.jp/istc-tamlab/cspsat/internal_information/index.html">内部資料</a> (管理者only)
+</p>
+
+
+<hr>
+<!-- <img width="20%" src="banbara.png"><br> -->
+<font size="-1">
+<table>
+<tr>
+<td><img width="150px" src="soh.png"></td>
+<td class="button2"><a href="../index.html">Tamura Lab.</a><a href="http://kix.istc.kobe-u.ac.jp/~soh/jp/">T. Soh</a></td>
+</tr>
+</table>
+</font>
+<img src="http://cgi.center.kobe-u.ac.jp:8000/cgi-bin/Count.cgi?df=svc00652-cspsat.dat|dd=C" align=absmiddle>
+<font size="-1">since 24th March 2009</font>
+
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6313627-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-05-25 水 10:17 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Takehide Soh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="cspsat3.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<style type="text/css">
+#table1 th { background-color: #800000; color: white;
+     border-style: solid; border-color: black; border-width: thin;
+     border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+     border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #efefff; color: black; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+h1#aa {
+    border-color:#800000;
+    border-width:4px 0px 4px 0px;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:30px;
+    border-style:solid;
+    font-size:1.7em;
+}
+</style>
+
+<h1 id="aa">
+CSPSAT合同ミーティング
+</h1>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">会議情報</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<ul class="org-ul">
+<li>日程
+<ul class="org-ul">
+<li>2016年6月1日(水), 2日(木)</li>
+</ul></li>
+<li>会議名
+<ul class="org-ul">
+<li>CSPSAT合同ミーティング
+<ul class="org-ul">
+<li>(6月1日: レジリエンス/COP/CSPASP)</li>
+<li>(6月2日: CSPSAT3)</li>
+</ul></li>
+</ul></li>
+<li>用務先
+<ul class="org-ul">
+<li>6月1日: 神戸大学 深江キャンパス 2号館 沖本研究室 (301号室)
+<ul class="org-ul">
+<li>〒658-0022 神戸市東灘区深江南町5丁目1-1</li>
+</ul></li>
+<li>6月2日: 神戸大学 六甲台キャンパス 自然科学総合研究棟3号館(東)4F
+渕野グループ プレゼンテーション室(421号室)
+<ul class="org-ul">
+<li>〒657-8501 兵庫県神戸市灘区六甲台町1-1</li>
+</ul></li>
+</ul></li>
+<li>サポート
+<ul class="org-ul">
+<li>科研・基盤Bプロジェクト SATを基盤とした新しい制約プログラミングシステムの研究開発</li>
+<li>科研・基盤Cプロジェクト SAT符号化を用いた制約解集合プログラミングに関する研究開発</li>
+<li>科研・基盤Bプロジェクト レジリエントなシステムのモデル化と推論に関する研究</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2">プログラム</h2>
+<div class="outline-text-2" id="text-orgheadline2">
+<ul class="org-ul">
+<li>プログラムは下記の通りですが，発表の進行状況に合わせて柔軟に進めたいと思います．</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">6月1日(水)</th>
+<th scope="col" class="org-left">@神戸大学・深江キャンパス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">JSAI セッション</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">14:00-14:30</td>
+<td class="org-left">分散制約充足問題：大域的な決定に影響を及ぼすエージェントの特定に関する一検討</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>浦地勇人</b>, 沖本天太, Nicolas Schwind, 平山勝敏, 井上克巳</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">14:30-15:00</td>
+<td class="org-left">Distributed Stochastic Search Algorithm for n-Ship Collision Avoidance</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>Dong-Gyun Kim</b>, Katsutoshi Hirayama, Tenda Okimoto</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">Team Formation セッション</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">15:00-15:30</td>
+<td class="org-left">AmorCSG : 進捗報告</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>岸田有平</b>, 沖本天太, Nicolas Schwind, 平山勝敏, 井上克巳, Pierre Marquis</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">15:30-16:00</td>
+<td class="org-left">Recoverable Team Formation</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>Emir Demirović</b>, Maxime Clement, Nicolas Schwind, Ttenda Okimoto, Katsumi Inoue</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">Disaster セッション</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">16:00-17:00</td>
+<td class="org-left">Overview : Intelligent Disaster Logistics Support System</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>Tenda Okimoto</b>, Hiroki Sakai, Etsuko Nishimura</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">OR セッション</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">17:00-17:30</td>
+<td class="org-left">MO-NRP : Progress Report</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>Shih-Min Wu</b>, Tenda Okimoto, Katsutoshi Hirayama, Katsumi Inoue</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">17:30-18:00</td>
+<td class="org-left">MaxSAT-Based Large Neighborhood Search for High School</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>Emir Demirović</b>, Nysret Musliu</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">18:00-18:30</td>
+<td class="org-left">\(\Sigma\)-Optimal Solutions in Highly Symmetric Multi-Objective Timetabling Problems</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>Maxime Clement</b>, Tenda Okimoto, Katsumi Inoue, Mutsunori Banbara</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">19:30 -</td>
+<td class="org-left">Discussion</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">6月2日(木)</th>
+<th scope="col" class="org-left">@神戸大学・六甲台キャンパス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">10:00-10:30</td>
+<td class="org-left">CSPSAT3 プロジェクトの概要</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>田村直之</b></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">10:30-11:00</td>
+<td class="org-left">2016年度の講演会・研究会スケジュールの議論</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">11:00-12:00</td>
+<td class="org-left">分散並列 SAT ソルバにおける問題分割手法の検討 (#1)</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">制約最適化問題のための分散並列解法の検討 (#2)</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">高見明秀(#1)，楠剛毅(#2)， <b>鍋島英知</b> (#12)</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">12:00-12:30</td>
+<td class="org-left">Modeling and Solving Staff Scheduling with Partial Weighted maxSAT</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>Emir Demirović</b>, Nysret Musliu, and Felix Winter.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">昼休み</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">14:00-14:30</td>
+<td class="org-left">SAT型制約ソルバーによるナンバーリンクの解法とその評価</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>迫龍哉</b>, 川原征大, 宋剛秀, 番原睦則, 田村直之, 鍋島英知</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">14:30-15:00</td>
+<td class="org-left">SATソルバーを用いた部分グラフ探索のための制約モデル</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><b>川原征大</b>, 宋剛秀, 番原睦則, 田村直之</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">15:30-17:00</td>
+<td class="org-left">今後の研究計画に関する議論</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3">参加者 (1日目，2日目合計)</h2>
+<div class="outline-text-2" id="text-orgheadline3">
+<ul class="org-ul">
+<li>国立情報学研究所
+<ul class="org-ul">
+<li>井上克巳, Maxime Clement</li>
+</ul></li>
+<li>山梨大学
+<ul class="org-ul">
+<li>鍋島英知</li>
+</ul></li>
+<li>神戸大学
+<ul class="org-ul">
+<li>田村直之, 番原睦則, 平山勝敏, 沖本天太,  金東均, 呉詩敏, 岸田有平, 伊角愛結, 浦地勇人,
+川原征大, 迫龍哉, 寸田智也, 南雄之, 坡山直樹, 吉玉元和, 宋剛秀</li>
+</ul></li>
+<li>Vienna University of Technology
+<ul class="org-ul">
+<li>Emir Demirović</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Takehide Soh</p>
+<p class="date">Created: 2016-05-25 水 10:17</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

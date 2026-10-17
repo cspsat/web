@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>論理と推論の理論, 実装, 応用に関する合同セミナー</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="論理と推論の理論, 実装, 応用に関する合同セミナー"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-08-03 19:10:51 JST"/>
+<meta name="author" content="Takehide Soh"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+
+<link rel="stylesheet" type="text/css" href="../portal.css"/>
+<script type="text/javascript" src="hide.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">論理と推論の理論, 実装, 応用に関する合同セミナー</h1>
+
+
+<style type="text/css">
+h1 { display: none }
+#table1 th { background-color: #6576CC; color: white;
+     border-style: solid; border-color: black; border-width: thin;
+     border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+     border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #6576CC; color: white; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+</style>
+
+<img border="0" align="center" width="800px" src="hokudai-icho-4-upload.jpg">
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">概要</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>会議名
+<ul>
+<li>論理と推論の理論, 実装, 応用に関する合同セミナー
+</li>
+</ul>
+
+</li>
+<li>日程
+<ul>
+<li>2013年7月24日(水)-25日(木)
+</li>
+</ul>
+
+</li>
+<li>用務先
+<ul>
+<li>北海道大学 工学部C304 ERATOセミナ室 (<a href="http://www-erato.ist.hokudai.ac.jp/html/php/access.php?id=1">アクセスマップ</a>)
+</li>
+</ul>
+
+</li>
+<li>用務地
+<ul>
+<li>〒060-0814 北海道札幌市北区北14条西9丁目 
+</li>
+</ul>
+
+</li>
+<li>主催
+<ul>
+<li><a href="http://www.edu.kobe-u.ac.jp/istc-tamlab/cspsat/index.html">CSPSAT2プロジェクト</a>
+</li>
+<li><a href="http://www-erato.ist.hokudai.ac.jp">ERATO湊離散構造処理系プロジェクト</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">プログラム</h2>
+<div class="outline-text-2" id="text-2">
+
+<table  border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">7月24日(水)</th><th scope="col" class="left"></th></tr>
+</thead>
+<tbody>
+<tr><td class="left">13:50 - 14:00</td><td class="left"><b>オープニング</b></td></tr>
+<tr><td class="left"></td><td class="left">田村直之 (神戸大学)</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">14:00 - 15:00</td><td class="left"><b>特別講演</b> 「ERATO湊離散構造処理系プロジェクトの近況と今後の展望」<a href="../pdf-open/cspsat2_seminar06_minato.pdf">[PDF]</a></td></tr>
+<tr><td class="left"></td><td class="left">湊真一 (北海道大学) <a href="javascript:void(0)" onclick="hide('minato');">[概要]</a><div id="minato" style="display:none;"><br> ERATO湊離散構造処理系プロジェクトは2010年4月より本格的な研究活動を開始して、今年で4年目に入った。本プロジェクトは開放的な組織運営により、多様な研究者・技術者が集う場を形成しており、これまでに、学術的成果のみでなく、小中高生や一般市民の注目を集める成果や、社会的に重要な応用事例など、当初予想していなかったような多様な研究成果が得られている。本講演では、本プロジェクトの近況と今後の展望について述べる。</div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">15:00 - 15:10</td><td class="left">休憩</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">15:10 - 16:10</td><td class="left"><b>特別講演</b> 「制約充足問題のSAT符号化」<a href="../pdf-open/cspsat2_seminar06_tamura.pdf">[PDF]</a></td></tr>
+<tr><td class="left"></td><td class="left">田村直之 (神戸大学) <a href="javascript:void(0)" onclick="hide('tamura');">[概要]</a> <div id="tamura" style="display:none;"> 共同研究者: 番原睦則，宋剛秀 (神戸大学) <br><br> 制約充足問題をSATに符号化する手法には，直接符号化，支持符号化，対数符号化，順序符号化，コンパクト順序符号化などがある．本講演では，いくつかの制約充足問題を例題として各種SAT符号化の概要を解説し，特に順序符号化の特徴について述べる．また，制約モデリングによる違いについても言及する．</div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">16:10 - 16:20</td><td class="left">休憩</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">16:20 - 17:20</td><td class="left"><b>招待講演</b> 「制約を利用したSAT解法」<a href="../pdf-open/cspsat2_seminar06_hasegawa.pdf">[PDF]</a></td></tr>
+<tr><td class="left"></td><td class="left">長谷川隆三 (九州大学) <a href="javascript:void(0)" onclick="hide('hasegawa');">[概要]</a> <div id="hasegawa" style="display:none;"> <br> SAT問題を制約を利用して効率的に解くというポリシーの下、九州大学大学院システム情報科学研究院長谷川・藤田研究室で行った研究の主な成果を三部構成で紹介する．<br><br>[Part1] モデル生成型SATソルバー<br>1階の極小モデル生成器MM-MGTPを命題に特化したMiniMGを開発した．MiniMGでは，違反節に基づく多分岐や分岐仮定による極小モデル生成を特長とするMGTPと，学習節やリスタート等の最新のSAT技術を備えたDPLL型ソルバーMiniSatの融合を図っている．SATベンチマークに対する極小モデルの全解探索実験では，MiniMGはMGTPを凌駕したが，入力節の正選言でしか分岐しないため，うまい変数順序が選べず性能が低下する問題があった．これを解決するため，学習節をある基準の下で分岐に利用し，削除する方式を考案した．SAT Competition, SATRACEの問題から抽出した303問を用いた評価実験の結果，上記に基づく改良版MiniMGは，従来のMiniMGよりも13問，また，MiniSat2.0よりも4問多く解くことができ，通常のSATソルバーとしても十分通用することが分かった．<br><br>[Part2] MaxSATソルバー<br>多くの制約充足問題はSAT問題に変換して解くことができるが，とりわけ基数制約は重要である。基数制約の代表的CNF符号化方式として，BailleuxらによるTotalizer (TO) とAsinらによるHalf Sorting Network (HS) がある．TOは1進数表現の整数を用いており，生成される節数は \(O(n^{2})\) ，変数数は \(O(n ~ \log ~ n)\) である．HSは odd-even merge に基づいており，生成される節数および変数数はともに \(O(n ~ \log^{2} ~ n)\) である．我々はこれまで，TO をベースとした部分MaxSATソルバーQMaxSATを開発してきた．このK-基数版はMaxSAT2012の部分MaxSAT部門Industrial，Crafted分野で優勝した．TOは変数数の点でHSより優れているが，節数の点では著しく劣る．これを克服するため，modulo計算に基づくModulo Totalizer (MTO) を考案した．法 \(p=n^{1/2}\) のとき，MTOの節数は \(O(n^{3/2})\) ，変数数は \(O(n ~ \log ~ n)\) である．<br> [速報] MTO版QMaxSatはMaxSAT2013の部分MaxSAT部門Industrial分野で２位に入賞．<br><br>[Part3] 未解決問題に挑戦<br>我々は，ICOTプロジェクトの頃から自動定理証明技術の応用として組合せ最適化問題等の未解決問題に取組んでいる．制約を扱うCMGTPを用い，1993年に準群に関する未解決問題 (QG5-16) を解くことに成功した．その後，MiniSaT及び並列計算環境を利用することにより，2009年にはさらに高次のQG5-18の解決に成功した．この結果を受け，より困難な未解決問題としてラムゼー数に関する挑戦を開始した．ソルバー技術，制約技法等について試行錯誤の結果，2012年にラムゼー数R(4,8)の下界更新に成功した．成功の要因は，問題に固有の対称性等，適切な補助制約の推察・発見とその利用である．ここで採られた，制約緩和技術をSCSatとしてツール化し，さらなる未解決問題探求に向け，改良を進めている．</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">17:20 - 17:30</td><td class="left">休憩</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">17:30 - 18:30</td><td class="left"><b>招待講演</b> 「Programming and Modelchecking with Hypergraphs」<a href="../pdf-open/cspsat2_seminar06_ueda.pdf">[PDF]</a></td></tr>
+<tr><td class="left"></td><td class="left">上田和紀 (早稲田大学) <a href="javascript:void(0)" onclick="hide('ueda');">[概要]</a> <div id="ueda" style="display:none;"> <br> A grand challenge in computing is to establish a substrate computational model that encompasses diverse forms of non-sequential computation.  This talk demonstrates how a hypergraph rewriting framework nicely integrates various forms and ingredients of concurrent computation.  Specifically, we show how fine-grained strong reduction of the lambda calculus can be concisely encoded into hypergraph rewriting with a small set of primitive operations.<br><br> The whole framework has been embodied as our publicly available HyperLMNtal language and system that evolved into a parallel LTL model checker.  The strengths of our HyperLMNtal model checker are its powerful data structures with a symmetry reduction mechanism, highly nondeterministic computation it can express, and little discrepancy between programming and modeling languages.  The implementation achieved high scalability and can handle models with half billion states. <br><br> Unlike black-box approaches to model checking, the visualizer of LaViT turned out to be extremely useful in analyzing and understanding models by state space browsing.  The talk will be given with live demos of examples taken from various fields of computing.</div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">19:30 -</td><td class="left"><b>懇親会</b></td></tr>
+</tbody>
+</table>
+
+<br>
+<table  border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">7月25日(木)</th><th scope="col" class="left"></th></tr>
+</thead>
+<tbody>
+<tr><td class="left">09:30 - 10:30</td><td class="left"><b>招待講演</b> 「メカニズムデザインと最適化」<a href="../pdf-open/cspsat2_seminar06_yokoo.pdf">[PDF]</a> <a href="../pdf-open/cspsat2_seminar06_yokoo.pptx">[PPTX]</a></td></tr>
+<tr><td class="left"></td><td class="left">横尾真 (九州大学) <a href="javascript:void(0)" onclick="hide('yokoo');">[概要]</a> <div id="yokoo" style="display:none;"> <br> ある環境に存在する人間の集団に対して，集団としての意思決定のメカニズム／制度を導入すると，何らかの社会的な結果が得られる．望ましい結果を得るためのメカニズムの設計方法に関する研究は，メカニズムデザイン／制度設計と呼ばれ，ゲーム理論／ミクロ経済学の一分野として活発な研究が行われている．メカニズムデザインに関する著名な研究成果として，1996 年にノーベル経済学賞を受賞したW. Vickrey による第二価格入札に関する研究がある．従来，第二価格入札は理論的に優れた性質を持つにも関わらず，広く用いられるには至らなかった．ところが，近年，検索エンジンでのキーワード広告において，第二価格入札が用いられるようになり，今や第二価格入札は世界中でもっとも頻繁に実行されている入札方式となっている．<br> 従来，このような望ましい結果を得るためのメカニズムは人手により開発されてきたが，メカニズム設計をある種の最適化問題として表現し，望ましい性質を持つメカニズムを自動的に生成しようとする研究が行われている (自動メカニズムデザイン). 本講演では，メカニズムデザイン，および自動メカニズムデザインに関して概説し，機械学習や法則発見等の研究との関連について議論する．</div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">10:30 - 10:40</td><td class="left">休憩</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">10:40 - 11:40</td><td class="left"><b>招待講演</b> 「緩和+分解+調整による分散協調問題解決」<a href="../pdf-open/cspsat2_seminar06_hirayama.pdf">[PDF]</a> <a href="../pdf-open/cspsat2_seminar06_hirayama.pptx">[PPTX]</a></td></tr>
+<tr><td class="left"></td><td class="left">平山勝敏 (神戸大学) <a href="javascript:void(0)" onclick="hide('hirayama');">[概要]</a><div id="hirayama" style="display:none;">  <br> マルチエージェントシステム（MAS: Multi-Agent Systems）における多くの問題は、あるまとまりをもった構成要素が互いに疎に結合された制約問題として記述することができる。本発表では、そのような制約問題を、緩和（Relax）して分解（Decompose）した後に調整（Coordinate）して解くという解法の枠組みを紹介し、MASの問題への主な適用例を述べる。</div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">11:40 - 13:00</td><td class="left">昼食</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">13:00 - 14:00</td><td class="left"><b>招待講演</b> 「バーストを伴うデータストリームのマイニングその他について」<a href="../pdf-open/cspsat2_seminar06_iwanuma.pdf">[PDF]</a></td></tr>
+<tr><td class="left"></td><td class="left">岩沼宏治 (山梨大学) <a href="javascript:void(0)" onclick="hide('iwanuma');">[概要]</a><div id="iwanuma" style="display:none;">共同研究者: 山本泰生  <br><br> 本講演では，まず，データストリーム中の頻出な系列やアイテム集合のオンライン型マイニングのアルゴリズムについて簡単に紹介し，次に我々が開発した「データバーストを伴うストリームを固定容量のメモリでマイニングする近似アルゴリズム」を紹介する。更に時間が許せば，負の相関ルールマイニングの現状と我々のアプローチについても紹介させて頂く。</div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">14:00 - 14:10</td><td class="left">休憩</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">14:10 - 15:10</td><td class="left"><b>特別講演</b> 「動的ネットワークの論理モデルに関する推論と学習」<a href="../pdf-open/cspsat2_seminar06_inoue.pdf">[PDF]</a><br>　　　　　(英語タイトル: Inference of Dynamic Boolean Networks)</td></tr>
+<tr><td class="left"></td><td class="left">井上克巳 (国立情報学研究所)　<a href="javascript:void(0)" onclick="hide('inoue');">[概要]</a>　<a href="javascript:void(0)" onclick="hide('inoue_en');">[Abstract]</a><div id="inoue" style="display:none;"><br>ブーリアンネットワーク (BN) やセルオートマトン (CA) を含む動的な系の論理モデルに関する推論と学習について講演する．これらの系は標準論理プログラム (NLP) を用いて表現でき，プログラムの各ルールは状態遷移規則を表している．また，NLP の T_P オペレーターは状態の同期更新に相当しており，系のアトラクターは NLP の支持クラス意味論を用いて表される．さらに，状態遷移の観測列を入力とし，NLP で表される系を学習するアルゴリズムを開発し，BN や CA の学習に応用している．</div>　<div id="inoue_en" style="display:none;">Katsumi Inoue (National Institute of Informatics)<br><br> We study inference and learning of logic-based dynamic systems including Boolean networks (BNs) and cellular automata (CAs).  We first show that these systems can be expressed as normal logic programs (NLPs), which are regarded as sets of state transition rules.  <br> On the inference side, the supported model semantics of NLPs can characterize point attractors of BNs, and supported classes of NLPs represent periodic oscillation induced by the T_P operator, which can characterize cycle attractors of BNs. <br> On the leaning side, given a set of pairs of interpretations (I,J) such that J=T_P(I), we infer the program P.  This framework can be applied to infer BNs from basins of attraction and to identify CAs by observing transitions of configurations. </div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">15:10 - 15:20</td><td class="left">休憩</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">15:20 - 16:20</td><td class="left"><b>招待講演</b> 「論理、確率、機械学習」<a href="../pdf-open/cspsat2_seminar06_sato.pdf">[PDF]</a></td></tr>
+<tr><td class="left"></td><td class="left">佐藤泰介 (東京工業大学)　<a href="javascript:void(0)" onclick="hide('sato');">[概要]</a><div id="sato" style="display:none;">共同研究者: 亀谷由隆 (名城大学) <br><br>確率モデルにもとづく統計的機械学習では、不変な構造（グラフなど）に確率パラメータを持たせ、データからパラメータを学習することにより、現実に合うモデルを構築する。<br>本講演では不変な構造として論理を選び、論理に確率を加えたモデリング言語による機械学習について、可能多世界意味論から命題論理による確率計算とパラメータ学習まで概説する。</div></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">16:20 - 16:30</td><td class="left">休憩</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">16:30 - 18:30</td><td class="left"><b>デモ発表</b> 「SAT型制約プログラミングシステムのための高速開発ツール」<a href="../pdf-open/cspsat2_seminar06_soh.pdf">[PDF]</a><br> 宋剛秀 (神戸大学) <a href="javascript:void(0)" onclick="hide('soh');">[概要]</a><div id="soh" style="display:none;">共同研究者: 田村直之, 番原睦則 (神戸大学), Daniel Le Berre, and Stéphanie Roussel (CRIL) <br><br> ScarabはSAT型制約プログラミングシステム開発者を対象に高い表現力，変更容易性，効率性を備えたワークベンチを提供することを目的としたツールである．主に制約プログラミングのためのドメイン特化言語, SAT符号化モジュール, SATソルバーへのインターフェースから構成されており，特にSATソルバーSat4jに対する API を使用することにより，インクリメンタル SAT解法などのSAT解法技術を実現可能である．<br>本発表では，いくつかの例を用いて Scarab の特長について説明を行う．</div></td></tr>
+<tr><td class="left"></td><td class="left"><b>デモ発表</b> 「GlueMiniSat 2.2.7: On-The-Fly Lazy Clause Simplification」<a href="../pdf-open/cspsat2_seminar06_nabeshima.pdf">[PDF]</a> <br> 鍋島英知 (山梨大学) <a href="javascript:void(0)" onclick="hide('nabeshima');">[概要]</a><div id="nabeshima" style="display:none;">共同研究者: 岩沼宏治 (山梨大学), 井上克巳 (国立情報学研究所) <br><br> SAT 2013 Competition に参加した GlueMiniSat 2.2.7 の概要と結果について報告する．GlueMiniSat 2.2.7 の特徴は，binary resolvents を利用した軽量な節簡単化手法にある．また，矛盾発生速度の向上を目的としたリスタート戦略や，真偽値割り当てが急速に成長した場合にリスタートを保留する戦略も導入している．本発表では，これらの概要について紹介する．</div></td></tr>
+<tr><td class="left"></td><td class="left"><b>デモ発表</b> 「QwMaxSAT: a Weighted Partial MaxSAT Solver」<a href="../pdf-open/cspsat2_seminar06_koshimura.pdf">[PDF]</a> <a href="../pdf-open/cspsat2_seminar06_koshimura.pptx">[PPTX]</a> <br> 越村三幸 (九州大学)  <a href="javascript:void(0)" onclick="hide('koshimura');">[概要]</a><div id="koshimura" style="display:none;"> <br> 基数制約のSAT符号化を利用して実装されているQwMaxSATについて報告する．QwMaxSATは，重みなし部分MaxSAT問題に対して高い性能を示すQMaxSATのSAT符号化部分を別の符号化方式に代えたものである．重みつきMaxSAT問題を解くには，巨大な基数を扱う必要があり，arc consistencyを満たさないSAT符号化を採用した．本発表では，これらの概要とQMaxSATとの性能比較について述べる．</div></td></tr>
+<tr><td class="left"></td><td class="left"><b>デモ発表</b> 「SCSat: A Soft Constraint Guided SAT Solver」<a href="../pdf-open/cspsat2_seminar06_fujita.pdf">[PDF]</a> <a href="../pdf-open/cspsat2_seminar06_fujita.pptx">[PPTX]</a> <br> <a href="http://opal.inf.kyushu-u.ac.jp/~fujita/scsat-demo-jp.html" id="table1">(補足資料) SCSat (+Ramsey パッケージ) デモンストレーション</a> <br> 藤田博 (九州大学) <a href="javascript:void(0)" onclick="hide('fujita');">[概要]</a><div id="fujita" style="display:none;">共同研究者: 長谷川隆三，越村三幸 (九州大学) <br><br> ソフト制約を用いて探索誘導を行うSCSatの概要と成果について報告する．適切なソフト制約が与えられれば，稀少な充足解への効率的な探索誘導が可能となる．ソフト制約が強すぎる場合には，緩和と探索再開が自動的に行われる．これにより，ラムゼーグラフRG(4,8,57)を発見し，ラムゼー数R(4,8)の最良下界を56から58に更新することに成功した．本発表では，これらの概要について紹介する．</div></td></tr>
+<tr><td class="left"></td><td class="left"><b>デモ発表</b> 「Graphillion」<br> 中元政一 (ERATO湊離散構造処理系プロジェクト) <a href="../pdf-open/cspsat2_seminar06_nakamoto.pdf">[PDF]</a></td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">18:30 - 18:40</td><td class="left"><b>クロージング</b></td></tr>
+<tr><td class="left"></td><td class="left">湊真一 (北海道大学)</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left">19:45 -</td><td class="left"><b>懇親会</b></td></tr>
+</tbody>
+</table>
+
+<br>
+<table  border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">7月26日(金)</th><th scope="col" class="left"></th></tr>
+</thead>
+<tbody>
+<tr><td class="left"></td><td class="left"><a href="../mtg203/index.html" id="table1">第3回CSPSAT2研究会</a> (注)</td></tr>
+</tbody>
+</table>
+
+
+
+
+
+<font size="2">(注) CSPSATプロジェクトおよび湊離散構造処理系プロジェクトでクローズドな研究会です</font>
+
+<p>
+<br>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">参加申込み方法</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>本合同セミナーはどなたにもご参加頂けます．<br>
+参加をご希望される方は氏名, 所属, 参加日程を宋 (
+<img border="0" align="center" width="150px" src="soh.png">
+) までお送りください．
+</p>
+<p>
+<br>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">懇親会情報</h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li>7月24日(水) 19時30分〜21時30分
+<ul>
+<li><a href="http://www.marushinkawamura.com/ku-shin.html">くし路 (新北海道ビル店)</a>
+</li>
+<li>〒060-0807 札幌市北区北7条西4丁目 新北海道ビルB1F
+</li>
+<li>TEL: 011-737-0888
+</li>
+<li>(予算) 5000円程度
+</li>
+<li>(アクセス) JR札幌駅西通り北口から徒歩1分．詳細は<a href="http://www.marushinkawamura.com/ku-shin-map.html">こちら</a>
+</li>
+</ul>
+
+</li>
+<li>7月25日(木) 19時45分〜21時45分
+<ul>
+<li><a href="http://www.sapporo-bier-garten.jp">サッポロビール園</a>
+</li>
+<li>〒065-0007 札幌市東区北7条東9丁目2-10
+</li>
+<li>TEL: 0120-150-550 (予約), 011-742-1531 (代表)
+</li>
+<li>(予算) 4000円程度
+</li>
+<li>(アクセス) JR札幌駅北口2番乗場からバス利用．詳細は<a href="http://www.sapporo-bier-garten.jp/special/access.php">こちら</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">その他</h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li>合同セミナー終了後, 発表資料は, 本Webページに認証付きで公開させていただく予定です．
+</li>
+<li>遠方の方で，ハンドアウト等の配布物がありましたら，ファイル(PDF)と部数を宋までご連絡ください．
+</li>
+<li><a href="../internal_pages/seminar06-participants.html">内部資料</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-08-03 19:10:51 JST</p>
+<p class="author">Author: Takehide Soh</p>
+<p class="creator">Org version 7.8.11 with Emacs version 23</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

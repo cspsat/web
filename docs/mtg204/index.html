@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2014-04-02 水 13:40 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Takehide Soh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="myhome.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<style type="text/css">
+#table1 th { background-color: #6576CC; color: white;
+     border-style: solid; border-color: black; border-width: thin;
+     border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+     border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #6576CC; color: white; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+h1#aa {
+    border-color:#6576CC;
+    border-width:4px 0px 4px 0px;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:30px;
+    border-style:solid;
+    font-size:1.7em;
+}
+</style>
+
+<h1 id="aa">
+NIIグランドチャレンジ・NII共同研究・CSPSAT2 合同セミナー<br>
+<font size="3">伊平屋島：サスティナブルな開発の実現化にむけて</font>
+</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">会議/宿泊情報</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>会議名
+<ul class="org-ul">
+<li>NIIグランドチャレンジ・NII共同研究・CSPSAT2 合同セミナー<br>
+「伊平屋島：サスティナブルな開発の実現化にむけて」
+</li>
+</ul>
+</li>
+<li>日程
+<ul class="org-ul">
+<li>2014年3月13日(木)〜16日(日)
+</li>
+</ul>
+</li>
+<li>用務先
+<ul class="org-ul">
+<li><a href="http://www.iheya-island-yonezaki.net">いへや愛ランドよねざき</a> 研修室
+</li>
+</ul>
+</li>
+<li>用務地
+<ul class="org-ul">
+<li>〒905-0704 沖縄県島尻郡伊平屋村字島尻1982番地
+</li>
+</ul>
+</li>
+<li>宿泊施設
+<ul class="org-ul">
+<li><a href="http://www.shokokai.or.jp/47/4735910014/index.htm">松金ホテル</a>
+</li>
+<li>〒905-0703 伊平屋村字我喜屋2135番地の27 
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">概要</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>Computational Sustainability</b> は計算機および情報科学分野の技術を
+環境・経済・社会の要望などの均衡をとった持続可能 (サスティナブル) な開
+発に応用することを目的とした新しい融合研究分野である．<br>
+</p>
+
+<p>
+国際学術誌 ACM TIST で2011年に特集号 ([Gomes '11] 参照) が発表されたこ
+とに加えて人工知能分野のトップ国際会議であるAAAI-13において特別セッショ
+ンが設けられるなど活発に研究されており，本プロジェクトのテーマである制
+約技術も実現手段の一つとして注目を集めている.  <br>
+</p>
+
+<p>
+今回の合同セミナーでは離島におけるサスティナブルな開発を実現するための
+研究課題の発掘および必要となる制約技術の検討を目的として，沖縄県伊平屋
+島でフィールドワークと議論を行う．<br>
+</p>
+
+<p>
+伊平屋島には美しい海，野山，サンゴの石垣や赤瓦屋根の民家が残る
+昔ながらの集落がある．一方，伊平屋島にはムーライトマラソンで年々知名度が
+上がり観光化が急速に進んでいるが，開発が進むに伴い昔ながらの環境が損な
+われているという問題もある．<br>
+</p>
+
+<p>
+合同セミナーでは制約技術の研究者および現地の関係者による講演や研究打合
+せを通した交流から，環境・経済・社会の要望などの評価基準を同時に考慮す
+るような開発に関する問題の検討と制約モデル化，およびその問題を解くため
+のアルゴリズムの設計および評価について議論する．<br>
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">(参考情報)</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Carla P. Gomes, Qiang Yang: Introduction to special issue on computational sustainability. ACM TIST 2(4): 31 (2011).
+</li>
+<li>Computational Sustainability と人工知能に関する特別セッション,
+AAAI-13 <a href="http://www.aaai.org/Conferences/AAAI/2013/aaai13csaicall.php">http://www.aaai.org/Conferences/AAAI/2013/aaai13csaicall.php</a>
+</li>
+<li><a href="http://www.vill.iheya.okinawa.jp/detail.jsp?pageStart%3D0&id%3D11805&menuid%3D4016&funcid%3D1">伊平屋村の情報</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">プログラム</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>3月13日(木) &#x2014; 移動日
+<ul class="org-ul">
+<li>那覇空港(12:00) - 運天港(14:45) # <a href="http://www.ok-connection.net/timetable.php">やんばる急行バス</a>
+</li>
+<li>運天港(15:00) - 伊平屋(16:20) # <a href="http://www.vill.iheya.okinawa.jp/detail.jsp?id%3D11805&menuid%3D4016&funcid%3D1">フェリーいへや</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">3月14日(金)</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">10:30-11:00</td>
+<td class="left"><b>Task-Oriented Robust Team Formation</b> <a href="../pdf2/cspsat2_mtg204_okimoto.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Tenda Okimoto*, Nicolas Schwind, Maxime Clement, Katsumi Inoue.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">11:00-11:30</td>
+<td class="left"><b>Considering Dynamic Costs for Dynamic MO-DCOPs</b> <a href="../pdf2/cspsat2_mtg204_clement.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Maxime Clement*, Tenda Okimoto, Tony Ribeiro, Katsumi Inoue.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">11:30-12:00</td>
+<td class="left"><b>Utilitarian and Egalitarian Solution for Multi-Objective Constraint Optimization</b>  <a href="../pdf2/cspsat2_mtg204_schwind.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Nicolas Schwind*, Tenda Okimoto, Tony Ribeiro, Katsumi Inoue.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">12:00-13:30</td>
+<td class="left">昼休憩</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">13:30-14:00</td>
+<td class="left"><b>Ship Collision Avoidance Using Distributed Local Search</b> <a href="../pdf2/cspsat2_mtg204_kim.pdf">[PDF]</a> <a href="../pdf2/cspsat2_mtg204_kim.pptx">[PPTX]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Dong-Gyun Kim*, Katsutoshi Hirayama, Gyei-Kark Park</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">14:00-14:30</td>
+<td class="left"><b>Modeling of and Inference in Probabilistic Resilience Systems</b>  <a href="../pdf2/cspsat2_mtg204_zeltner.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Stefan Zeltner*, Katsumi Inoue.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">14:30-15:00</td>
+<td class="left">休憩</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">15:00-15:30</td>
+<td class="left"><b>Logic Programming for Cellular Automata</b> <a href="../pdf2/cspsat2_mtg204_voelker.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Marcus Voelker*, Katsumi Inoue.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">15:30-16:00</td>
+<td class="left"><b>Resilience in Causal Models</b> <a href="../pdf2/cspsat2_mtg204_chan.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Hei Chan*, Katsumi Inoue, Earl Bellinger.</td>
+</tr>
+</tbody>
+</table>
+
+<font size="-2">　</font>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">3月15日(土)</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">10:00-10:40</td>
+<td class="left"><font color=red>特別講演</font><br> <b>バランスのとれた行政運営</b></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">伊礼清 (伊平屋村・副村長)</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">10:40-11:20</td>
+<td class="left"><font color=red>特別講演</font><br> <b>情報学による持続可能な社会にむけた取り組み</b> <a href="../pdf2/cspsat2_mtg204_inoue.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">井上克巳 (国立情報学研究所・教授)</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">11:20-12:00</td>
+<td class="left"><font color=red>特別講演</font><br> <b>持続可能な社会基盤ネットワークのための協調計算技術</b> <a href="../pdf2/cspsat2_mtg204_hirayama.pdf">[PDF]</a> <a href="../pdf2/cspsat2_mtg204_hirayama.pptx">[PPTX]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">平山勝敏 (神戸大学・教授)</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">12:00-13:30</td>
+<td class="left">昼休憩</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">13:30-14:00</td>
+<td class="left"><b>SATソルバーにおける単位伝搬の並列性改善手法の検討</b> <a href="../pdf2/cspsat2_mtg204_nabesima.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">古橋燎, 鍋島英知*</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">14:00-14:30</td>
+<td class="left"><b>組込み基数制約とインクリメンタル解法を用いたハミルトン閉路問題の解法</b> <a href="../pdf2/cspsat2_mtg204_soh.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">宋剛秀*, Daniel Le Berre, Stephanie Roussel, 番原睦則，田村直之</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">14:30-15:00</td>
+<td class="left">休憩</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">15:00-15:30</td>
+<td class="left"><b>Modeling of Resilient Systems using ASP</b></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Andrei Doncescu*</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">15:30-16:00</td>
+<td class="left"><b>Counting non-zero Fourier coefficients in Sparse Boolean Cubes and its Applications to analyze random SAT instances</b> <a href="../pdf2/cspsat2_mtg204_yamamoto.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">Yoshitaka Yamamoto*, Tomoki Miyagi, Koji Iwanuma.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">16:00-16:30</td>
+<td class="left">休憩</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">16:30-17:30</td>
+<td class="left">今後の研究計画に関する議論</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>3月16日(日) &#x2014; 移動日
+<ul class="org-ul">
+<li>伊平屋(09:00) - 運天港(10:20) # <a href="http://www.vill.iheya.okinawa.jp/detail.jsp?id%3D11805&menuid%3D4016&funcid%3D1">フェリーいへや</a>
+</li>
+<li>運天港(10:25) - 那覇空港 (13:21) # <a href="http://www.ok-connection.net/timetable.php">やんばる急行バス</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">参加者 (16名)</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>伊平屋村
+<ul class="org-ul">
+<li>伊礼清
+</li>
+</ul>
+</li>
+<li>国立情報学研究所
+<ul class="org-ul">
+<li>井上克巳, 沖本天太, Maxime Clement, Nicolas Schwind, Hei Chan
+</li>
+</ul>
+</li>
+<li>東京工業大学
+<ul class="org-ul">
+<li>佐藤泰介
+</li>
+</ul>
+</li>
+<li>山梨大学
+<ul class="org-ul">
+<li>鍋島英知, 山本泰生
+</li>
+</ul>
+</li>
+<li>神戸大学
+<ul class="org-ul">
+<li>田村直之，平山勝敏，宋剛秀, Dong-Gyun Kim
+</li>
+</ul>
+</li>
+<li>LAAS - CNRS
+<ul class="org-ul">
+<li>Andrei Doncescu
+</li>
+</ul>
+</li>
+<li>RWTH Aachen University
+<ul class="org-ul">
+<li>Marcus Voelker
+</li>
+</ul>
+</li>
+<li>University of Southern California
+<ul class="org-ul">
+<li>Stefan Zeltner
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">その他</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>遠方の方で，ハンドアウト等の配布物がありましたら，ファイル(PDF)と部数を幹事までお送りください． こちらで印刷して会場にお持ちします．
+</li>
+<li>研究会終了後，発表資料は，本Webページに(認証付き)で公開させていただきます．
+</li>
+<li>現地の交通等の参考になる web page
+<ul class="org-ul">
+<li><a href="http://www.okinawainfo.net/iheya/traf.htm">伊平屋村の交通</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Takehide Soh</p>
+<p class="date">Created: 2014-04-02 水 13:40</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 23.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.1)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-11-21 月 08:29 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Takehide Soh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="myhome.css"/>
+<script type="text/javascript" src="hide.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<style type="text/css">
+#table1 th { background-color: #3B5998; color: white;
+     border-style: solid; border-color: black; border-width: thin;
+     border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+     border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #3B5998; color: white; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+
+h1#aa {
+    border-color:#3B5998;
+    border-width:4px 0px 4px 0px;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:30px;
+    border-style:solid;
+    font-size:1.7em;
+}
+</style>
+
+<h1 id="aa">
+10th CSPSAT Seminar
+</h1>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">Overview</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Title</td>
+<td class="org-left">10th CSPSAT Seminar</td>
+</tr>
+
+<tr>
+<td class="org-left">Date</td>
+<td class="org-left">November 14, 15 2016</td>
+</tr>
+
+<tr>
+<td class="org-left">Venue</td>
+<td class="org-left">Room #421 on the 4th floor of Science and Technology Research Building 3,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Rokkodai Campus, Kobe University [Campus Map: Building #23]</td>
+</tr>
+
+<tr>
+<td class="org-left">Address</td>
+<td class="org-left">1-1 Rokkodai, Nada, Kobe 657-8501, Japan</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2">Programme</h2>
+<div class="outline-text-2" id="text-orgheadline2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">November 14</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">14:30-15:30</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Trends in SAT solving: what are the recent progresses?</span>　<a href="../pdf3/cspsat3_seminar10_leberre.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Daniel Le Berre</span></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><a href="javascript:void(0)" onclick="hide('daniel');">[Abstract]</a><div id="daniel" style="display:none;"> The "SAT revolution" which occurred thanks to the design of the Conflict Driven Clause Learning (CDCL) solvers is now 15 years old. What are the main recent advances in the area of SAT solving? What are the main challenges remaining? This talk will summarize recent advances on SAT solving in the broad sense (including related optimization problems) and provide some open problems regarding SAT solving.</div></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">15:40-15:55</td>
+<td class="org-left"><font color="#bb4e4c">(Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Recent Research Topics of Our Group</span>　<a href="../pdf3/cspsat3_seminar10_tamura.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Naoyuki Tamura</span></td>
+</tr>
+
+<tr>
+<td class="org-right">15:55-16:40</td>
+<td class="org-left"><span class="title">Evaluation of Hybrid Encoding of CSP to SAT Integrating Order and Log Encodings</span>　<a href="../pdf3/cspsat3_seminar10_soh.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Takehide Soh</span></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">16:50-17:50</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Two-sided matching: optimization under incentive, stability, and distributional constraints</span>　<a href="../pdf3/cspsat3_seminar10_yokoo.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Makoto Yokoo</span></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><a href="javascript:void(0)" onclick="hide('yokoo');">[Abstract]</a><div id="yokoo" style="display:none;"> The theory of two-sided matching (e.g., assigning residents to hospitals, students to schools) has been extensively developed, and it has been applied to design clearinghouse mechanisms in various markets in practice. As the theory has been applied to increasingly diverse types of environments, however, researchers and practitioners have encountered various forms of distributional constraints. As these features have been precluded from consideration until recently, they pose new challenges for market designers. One example of such distributional constraints is a minimum quota, e.g., school districts may need at least a certain number of students in each school in order for the school to operate. In this talk, I present an overview of research on designing mechanisms that work under distributional constraints.</div></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">18:00-19:00</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Refining Clause Reduction Heuristics in CDCL Solvers</span>　<a href="../pdf3/cspsat3_seminar10_nabeshima.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Hidetomo Nabeshima</span></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">19:45-21:45</td>
+<td class="org-left">Social Dinner</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">November 15</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">09:30-10:30</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Recent Topics on BDDs/ZDDs: Implicit Enumeration and Compressed Indexing</span>　<a href="../pdf3/cspsat3_seminar10_minato.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Shin-ichi Minato</span></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">10:40-11:40</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">MaxSAT Encoding for MC-net/PDT-based Coalition Structure Generation Problem</span>　<a href="../pdf3/cspsat3_seminar10_koshimura.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Miyuki Koshimura, Kazuki Nomoto, Yuko Sakurai, and Makoto Yokoo</span></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">13:00-14:00</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Distributed Stochastic Search Algorithm for Multi-ship Encounter Situations</span>　<a href="../pdf3/cspsat3_seminar10_hirayama.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Katsutoshi Hirayama</span></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">14:10-15:10</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Parallel SAT solving guided by MaxSAT oracles on GPU</span>　<a href="../pdf3/cspsat3_seminar10_tourret.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Sophie Tourret* and Katsumi Inoue</span></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">15:20-16:20</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="title">Representative Solutions for Multi-Objective Constraint Optimization Problems</span>　<a href="../pdf3/cspsat3_seminar10_schwind.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Nicolas Schwind, Tenda Okimoto, Maxime Clement, and Katsumi Inoue</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3">Participants (25 persons from 11 institutions)</h2>
+<div class="outline-text-2" id="text-orgheadline3">
+<p>
+\(^{*}\) denotes members who will attend the social dinner on 14th. 
+</p>
+
+<ul class="org-ul">
+<li>CRIL-CNRS/Université d&rsquo;Artois
+<ul class="org-ul">
+<li>Daniel Le Berre\(^{*}\)</li>
+</ul></li>
+<li>Hokkaido University
+<ul class="org-ul">
+<li>Shin-ichi Minato\(^{*}\)</li>
+</ul></li>
+<li>National Institute of Informatics
+<ul class="org-ul">
+<li>Katsumi Inoue, Sophie Tourret\(^{*}\)</li>
+</ul></li>
+<li>National Institute of Advanced Industrial Science and Technology
+<ul class="org-ul">
+<li>Nicolas Schwind, Takashi KITAMURA, Jun Inoue  <sup><a id="fnr.1" class="footref" href="index.html#fn.1">1</a></sup></li>
+</ul></li>
+<li>SONAR Co., Ltd.
+<ul class="org-ul">
+<li>Kotaro Okazaki</li>
+</ul></li>
+<li>The University of Electro-Communications
+<ul class="org-ul">
+<li>Takahisa Toda\(^{*}\)</li>
+</ul></li>
+<li>Yamanashi University
+<ul class="org-ul">
+<li>Hidetomo Nabeshima\(^{*}\)</li>
+</ul></li>
+<li>Nagoya University
+<ul class="org-ul">
+<li>Masahiko Sakai <sup><a id="fnr.1.100" class="footref" href="index.html#fn.1">1</a></sup></li>
+</ul></li>
+<li>Kobe University
+<ul class="org-ul">
+<li>Katsutoshi Hirayama\(^{*}\), Naoyuki Tamura\(^{*}\), Mutsunori
+Banbara\(^{*}\), Takehide Soh\(^{*}\), Masahiro Kawahara, Tatsuya Sako, Tomoya Sunda, Yushi
+Minami, Motokazu Yoshitama, Naoki Hayama</li>
+</ul></li>
+<li>National Institute of Technology, Tokuyama College
+<ul class="org-ul">
+<li>Noriaki Chikara\(^{*}\) <sup><a id="fnr.2" class="footref" href="index.html#fn.2">2</a></sup></li>
+</ul></li>
+<li>Kyushu University
+<ul class="org-ul">
+<li>Makoto Yokoo, Miyuki Koshimura\(^{*}\), Aolong Zha\(^{*}\)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4">Social Dinner</h2>
+<div class="outline-text-2" id="text-orgheadline4">
+<ul class="org-ul">
+<li>Date and Time: November 14th (Mon.) 19:45 &#x2013;</li>
+<li>Restaurant: Uoku (魚喰)</li>
+<li>Address: 4-18, 3-chome, Nagate-cho, Nada-ku, Kobe, Hyogo, 657-0027</li>
+<li>TEL: (078) 842-5030</li>
+<li>URL: <a href="http://uoku.jp/">http://uoku.jp/</a></li>
+<li>Charge: 7,000 JPY (for faculty)，3,000 JPY (for student)</li>
+</ul>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="index.html#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Participate to Serminar on 14th. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="index.html#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+On 14th, will arrive after 4 p.m.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Takehide Soh</p>
+<p class="date">Created: 2016-11-21 月 08:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-05-05 日 16:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Takehide Soh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="cspsat3.css" />
+<style type="text/css">
+h1.title {
+padding: 0px;
+border:none;
+}
+#table1 th { background-color: #800000; color: white;
+border-style: solid; border-color: black; border-width: thin;
+border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #efefff; color: black; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="top"><a href="http://www.edu.kobe-u.ac.jp/istc-tamlab/cspsat/index.html"><img src="cspsat3.png" alt="CSPSAT3" border="0" width="300px"></a></h1>
+
+<table class="mini">
+<tr>
+  <td colspan="3" align="right">
+    <script language="JavaScript">
+    </script>
+  </td>
+</tr>
+<tr>
+  <td width="100px"></td>
+  <td class="mini"><a href="en/index.html">English</a> | Japanese</td>
+  <td class="button"><a href="cspsat.html">CSPSAT<br>(until FY2011)</a></td>
+  <td class="button"><a href="cspsat2.html">CSPSAT2<br>(until FY2014)</a></td>
+  <td class="button"><a href="cloud/index.html">Cloud<br>(until FY2015)</a></td>
+  <td class="button3"><a href="http://kaminari.scitec.kobe-u.ac.jp/project/cspasp/">CSPASP<br>(since FY2015)</a></td>
+</tr>
+</table>
+
+<table class="menu" border="0" cellspacing="5" cellpadding="0" width="800px">
+  <tr>
+    <td class="menu" bgcolor="#800000"><a href="https://www.edu.kobe-u.ac.jp/istc-tamlab/cspsat/index.html">ニュース</a></td>
+    <td class="menu" bgcolor="#800000"><a href="project-cs3.html">プロジェクト概要</a></td>
+    <td class="menu" bgcolor="#800000"><a href="mtgsem-cs3.html">講演会<br>＆研究会</a></td>
+    <td class="menu" bgcolor="#800000"><a href="accomp-cs3.html">研究成果物<br>(論文・ソフトウェア等)</a></td>
+  </tr>
+</table>
+
+<div id="outline-container-org1ad8840" class="outline-2">
+<h2 id="org1ad8840">ソフトウェア成果物</h2>
+<div class="outline-text-2" id="text-org1ad8840">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ソフトウェア名</th>
+<th scope="col" class="org-left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Sugar</td>
+<td class="org-left">(<a href="http://bach.istc.kobe-u.ac.jp/sugar/">web page</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://bach.istc.kobe-u.ac.jp/tamura.html">田村直之</a> (神戸大学)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Sugar は， 制約充足問題， 制約最適化問題， 最大制約充足問題を解くことができる SAT ベースの制約ソルバーです． CSP Solver Competition 2008-2009 において，二年連続・複数部門で優 勝しています．</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">SugarTracer</td>
+<td class="org-left">(<a href="http://bach.istc.kobe-u.ac.jp/sugar/sugartracer/">web page</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://bach.istc.kobe-u.ac.jp/tamura.html">田村直之</a> (神戸大学)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">SugarTracerは，<a href="http://bach.istc.kobe-u.ac.jp/sugar/">Sugar</a> によって出力されたCNFをSATソルバーが解く際の変数割当，矛盾発生，節学習等のイベントをCSPレベルで表示するプログラムです．オープンショップ用の描画機能も利用可能です．</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Copris</td>
+<td class="org-left">(<a href="http://bach.istc.kobe-u.ac.jp/copris/">web page</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://bach.istc.kobe-u.ac.jp/tamura.html">田村直之</a> (神戸大学)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Copris は制約プログラミング用のドメイン特化言語として開発され，Scalaのプログラマが簡潔に制約充足問題(CSP) や制約最適化問題(COP) を記述できることを目的に設計されたものです．バックエンドの制約ソルバーとして <a href="http://bach.istc.kobe-u.ac.jp/sugar/">Sugar</a> を用いており，制約ソルバーとしても高性能です．</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">GlueMiniSat</td>
+<td class="org-left">(<a href="https://sites.google.com/a/nabelab.org/glueminisat/home">web page</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="http://www.nabelab.org/">鍋島英知</a> (山梨大学)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">SAT ソルバーの劇的な性能向上と普及に貢献した代表的なソルバー <a href="http://minisat.se/">MiniSat</a> を改良した系統的ソルバーです．SAT Competition 2011 の Application 部門において，逐次型ソルバーとして UNSAT クラスで優勝，SAT+UNSAT クラスで準優勝, 2013年にも Certified UNSAT 部門で準優勝するなど，優秀な成績をおさめています．</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Scarab</td>
+<td class="org-left">(<a href="http://kix.istc.kobe-u.ac.jp/~soh/scarab/">web page</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">宋剛秀 (神戸大学), 田村直之, 番原睦則</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Scarab はSAT型システムのための開発ツールです．制約プログラミング用のドメイン特化言語を提供しており Copris と同様のツールですが，SAT符号化モジュールも含めて約500行の Scala 言語で書かれておりコンパクトで拡張容易な点が特長です．</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Azucar</td>
+<td class="org-left">(<a href="http://code.google.com/p/azucar-solver/">web page</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">丹生智也 (新領域融合研究センター)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Azucar は，コンパクト順序符号化を用いた SAT ベースの制約 ソルバーです．</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">sCOP</td>
+<td class="org-left">(<a href="https://tsoh.org/sCOP/">web page</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">宋剛秀, Daniel Le Berre, 番原睦則, 田村直之</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">sCOP は, SAT型の制約ソルバーです. <a href="http://www.cril.univ-artois.fr/XCSP18/">2018 XCSP3 Competition</a> の2部門で優勝しました.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org44ac9d1" class="outline-2">
+<h2 id="org44ac9d1">特集「最近のSAT技術の発展」<br> 人工知能学会誌 第25巻 第1号 (2010年1月)</h2>
+<div class="outline-text-2" id="text-org44ac9d1">
+<div class="HTML">
+<p>
+&lt;p&gt;
+  本特集は以下の8篇の解説から構成されています．
+  まず，&lt;b&gt;特集「最近のSAT技術の発展」にあたって&lt;/b&gt; 
+  &lt;a href=&ldquo;<a href="http://bach.istc.kobe-u.ac.jp/aisat.html">http://bach.istc.kobe-u.ac.jp/aisat.html</a>&rdquo;&gt;<a href="http://bach.istc.kobe-u.ac.jp/aisat.html">http://bach.istc.kobe-u.ac.jp/aisat.html</a>&lt;/a&gt;
+  で概要を把握した後に，各論を読んでいただくとより理解が深まります．
+&lt;/p&gt;
+</p>
+
+</div>
+<ul class="org-ul">
+<li>SATソルバーの基礎
+<ul class="org-ul">
+<li>井上克巳，田村直之</li>
+<li>人工知能学会誌，25巻1号，pp.57-67，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504953">http://ci.nii.ac.jp/naid/110007504953</a></li>
+</ul></li>
+<li>高速SATソルバーの原理
+<ul class="org-ul">
+<li>鍋島英知，宋剛秀，</li>
+<li>人工知能学会誌，25巻1号，pp.68-76，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504954">http://ci.nii.ac.jp/naid/110007504954</a></li>
+</ul></li>
+<li>制約最適化問題とSAT符号化
+<ul class="org-ul">
+<li>田村直之，丹生智也，番原睦則</li>
+<li>人工知能学会誌，25巻1号，pp.77-85，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504955">http://ci.nii.ac.jp/naid/110007504955</a></li>
+</ul></li>
+<li>SMT：個別理論を取り扱うSAT技術
+<ul class="org-ul">
+<li>岩沼宏治，鍋島英知</li>
+<li>人工知能学会誌，25巻1号，pp.86-95，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504956">http://ci.nii.ac.jp/naid/110007504956</a></li>
+</ul></li>
+<li>モデル列挙とモデル計数
+<ul class="org-ul">
+<li>長谷川隆三，藤田博，越村三幸，</li>
+<li>人工知能学会誌，25巻1号，pp.96-104，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504957">http://ci.nii.ac.jp/naid/110007504957</a></li>
+</ul></li>
+<li>＊-SAT: SATの拡張
+<ul class="org-ul">
+<li>平山勝敏，横尾真，</li>
+<li>人工知能学会誌，25巻1号，pp.105-113，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504958">http://ci.nii.ac.jp/naid/110007504958</a></li>
+</ul></li>
+<li>SATによるプランニングとスケジューリング
+<ul class="org-ul">
+<li>鍋島英知，</li>
+<li>人工知能学会誌，25巻1号，pp.114-121，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504959">http://ci.nii.ac.jp/naid/110007504959</a></li>
+</ul></li>
+<li>SATによるシステム検証
+<ul class="org-ul">
+<li>番原睦則，田村直之，</li>
+<li>人工知能学会誌，25巻1号，pp.122-129，2010年</li>
+<li><a href="http://ci.nii.ac.jp/naid/110007504960">http://ci.nii.ac.jp/naid/110007504960</a></li>
+</ul></li>
+</ul>
+
+
+<hr>
+<!-- <img width="20%" src="banbara.png"><br> -->
+<font size="-1">
+<table>
+<tr>
+<td><img width="150px" src="soh.png"></td>
+<td class="button2"><a href="../index.html">Tamura Lab.</a><a href="http://kix.istc.kobe-u.ac.jp/~soh/jp/">T. Soh</a></td>
+</tr>
+</table>
+</font>
+<img src="http://cgi.center.kobe-u.ac.jp:8000/cgi-bin/Count.cgi?df=svc00652-cspsat.dat|dd=C" align=absmiddle>
+<font size="-1">since 24th March 2009</font>
+
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6313627-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>

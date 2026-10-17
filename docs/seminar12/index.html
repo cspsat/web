@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-09-01 日 15:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>12th CSPSAT Seminar</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Takehide Soh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="myhome.css"/>
+<script type="text/javascript" src="hide.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">12th CSPSAT Seminar</h1>
+<style type="text/css">
+#table1 th { background-color: #3B5998; color: white;
+     border-style: solid; border-color: black; border-width: thin;
+     border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+     border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #3B5998; color: white; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+
+h1#aa {
+    border-color:#3B5998;
+    border-width:4px 0px 4px 0px;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:30px;
+    border-style:solid;
+    font-size:1.7em;
+}
+</style>
+<!--<h1 id="aa">
+SAT, System Verification and their Applications
+</h1>-->
+
+<div id="outline-container-orga03090c" class="outline-2">
+<h2 id="orga03090c">Overview</h2>
+<div class="outline-text-2" id="text-orga03090c">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Title</td>
+<td class="org-left">12th CSPSAT Seminar</td>
+</tr>
+
+<tr>
+<td class="org-left">Date</td>
+<td class="org-left">August 28, 29 2019</td>
+</tr>
+
+<tr>
+<td class="org-left">Venue</td>
+<td class="org-left">Room #421 on the 4th floor of Science and Technology Research Building 3,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Rokkodai 2nd Campus, Kobe University (Building #65 in <a href="http://www.kobe-u.ac.jp/en/campuslife/campus_guide/campus/rokkodai2.html">Campus Map</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Address</td>
+<td class="org-left">1-1 Rokkodai, Nada, Kobe 657-8501, Japan (<a href="http://www.kobe-u.ac.jp/en/campuslife/campus_guide/campus/index.html">Access</a>)</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li>Jointly held by:
+<ul class="org-ul">
+<li>2019 NII Collaborative Research Grants</li>
+<li>JSPS Bilateral Programs: Joint Research Projects with FRANCE (MEAE-MESRI) ``SAKURA Program&rsquo;&rsquo;</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org89e2e3e" class="outline-2">
+<h2 id="org89e2e3e">Programme</h2>
+<div class="outline-text-2" id="text-org89e2e3e">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Wednesday, August 28</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">14:30-16:00</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font> SAT-based Model Checking <a href="../pdf-close/cspsat3_seminar12_leberre.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Daniel Le Berre</span> <a href="javascript:void(0)" onclick="hide('danielb');">[Short Bio.]</a><div id="danielb" style="display:none;"> Prof. Daniel Le Berre got his Ph.d. degree from IRIT, Toulouse in 2000, on using SAT solvers to perform non monotonic reasoning. That thesis was about designing truth maintenance systems mechanisms using SAT engines.  After working in Australia under the direction of Mary-Anne Williams,  he has started his work at Artois University/CRIL since September 2001 as Associate professor, and has become full professor since 2013.  His interests are: SAT, MAXSAT, Pseudo-Boolean Optimization, QBF,  Nonmonotonic Reasoning, Modal Logics.  He initiated the SAT competition in 2002, and also he is the original creator of Sat4j, a free Java-based library of SAT technologies.  He has been awarded CNRS Innovation Medal on 2018 for the development  of the Sat4j open source library and its integration in the open platform Eclipse.</div></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><a href="javascript:void(0)" onclick="hide('daniel');">[Abstract]</a><div id="daniel" style="display:none;"> 20 years ago, Bounded Model Checking was proposed as an alternative to Model Checking using binary decision diagrams. While the initial finding was that SAT solvers could be an alternative when BDD-based system failed, such new application of SAT solvers triggered the design of the disruptive SAT solver Chaff, a huge interest for practical SAT solving in the academic community and the adoption of SAT technology in formal verification companies. This talk will review the principles behind SAT-based Model Checking, from it’s roots in Planning as Satisfiability to recent implementations which do not require unrolling.</div></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">16:15-17:45</td>
+<td class="org-left"><font color="#bb4e4c">(Invited Talk)</font> Bounded Model Checking and Systems Biology: merits and challenges <a href="../pdf-close/cspsat3_seminar12_magnin.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Morgan Magnin</span> <a href="javascript:void(0)" onclick="hide('morganb');">[Short Bio.]</a><div id="morganb" style="display:none;"> Prof. Morgan Magnin got his Ph.d. degree from École centrale de Nantes, France, for the work entitled &ldquo;Stopwatch Petri nets with dense-time and discrete-time semantics&rdquo;.  Since his Ph.d., he have been working in École centrale de Nantes, and he becomes Professor as well as the leader of the research team MeForBio in École centrale de Nantes. He is also a visiting Professor at National Institute of Informatics in Japan. His research interests are:  Logic Programming, Machine Learning, Model-checking, Systems Biology, Constraint Programming. </div></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><a href="javascript:void(0)" onclick="hide('morgan');">[Abstract]</a><div id="morgan" style="display:none;"> Understanding the mechanisms involved in biological regulation is a fundamental issue to analyze living systems. Time delays play a major role in the sustainability and control of oscillations, as shown for example in phenomena related to the mammal circadian clock. Our work focuses on synchronous/asynchronous Automata Networks (AN). In Automata Networks, the evolution of a component is determined by the state of at most one other component that does not evolve. This is modelled by actions of the form X+Y-&gt; X+Y&rsquo;, where X behaves like a catalyst molecule that “hits” another molecule Y and changes it into Y&rsquo;, without being changed itself. Assuming catalysts are always available, this can represent any biochemical system made of monomolecular reactions, and can also represent catalytic networks such as metabolic networks. Our motivation behind this framework was to design a model and analysis techniques adapted to biological modelling. These analyses avoid building the whole state space, which allows to tackle very large systems (that would have led to a huge number of states, hopelessly too huge to be analysed). Our work aims at checking reachability properties that, for a given initial state s and the discrete expression level n of a given component x, have the form: “Starting from state s, is it possible to reach a state in which x is at level n?”. The particular form of Automata Networks makes it possible to partially overcome combinatorial explosion problems by approaching the dynamics of the models. In this talk, we will discuss the merits and limits of such approaches, and draw comparisons with more classical bounded model checking approaches. In particular, we will emphasize the new results that may be brought by a combination between these methodologies.   </div></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">19:00-21:00</td>
+<td class="org-left">Social Dinner</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Thursday, August 29</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">09:30-10:30</td>
+<td class="org-left"><font color="#bb4e4c">(Talk)</font> ManyGlucose: A  Deterministic Parallel SAT solver <a href="../pdf-close/cspsat3_seminar12_nabeshima.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Hidetomo Nabesima</span></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">10:45-11:30</td>
+<td class="org-left"><font color="#bb4e4c">(Talk)</font> SAT-based Constraint Programming System: Fun-sCOP <a href="../pdf-close/cspsat3_seminar12_soh.pdf">[PDF]</a></td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left"><span class="author">Takehide Soh</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org04f8302" class="outline-2">
+<h2 id="org04f8302">Participants (21 persons from 8 institutions)</h2>
+<div class="outline-text-2" id="text-org04f8302">
+<p>
+\(^{*}\) denotes members who will attend the social dinner on 28th. 
+</p>
+
+<ul class="org-ul">
+<li>CRIL-CNRS/Université d&rsquo;Artois
+<ul class="org-ul">
+<li>Daniel Le Berre*</li>
+</ul></li>
+<li>Ecole Centrale de Nantes
+<ul class="org-ul">
+<li>Morgan Magnin*</li>
+</ul></li>
+<li>National Institute of Informatics
+<ul class="org-ul">
+<li>Katsumi Inoue*</li>
+</ul></li>
+<li>The University of Electro-Communications
+<ul class="org-ul">
+<li>Takahisa Toda</li>
+</ul></li>
+<li>University of Yamanashi
+<ul class="org-ul">
+<li>Hidetomo Nabeshima*</li>
+</ul></li>
+<li>Nagoya University
+<ul class="org-ul">
+<li>Masahiko Sakai*, Mutsunori Banbara*, Kentaro Yamada*, Kazuya Kuwahara*</li>
+</ul></li>
+<li>Osaka University
+<ul class="org-ul">
+<li>Tatsuhiro Tsuchiya*, Toshimitsu Ushio, Ami Sakakibara</li>
+</ul></li>
+<li>Kobe University
+<ul class="org-ul">
+<li>Tomio Kamada*, Patrick Finnerty*, Naoyuki Tamura*, Takehide Soh*,
+Naoki Iino*, Tetsuya Ikuta*, Tetsupei Mishima, Takaya Kiyasu, Atsushi Yamamoto</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7971d66" class="outline-2">
+<h2 id="org7971d66">Social Dinner</h2>
+<div class="outline-text-2" id="text-org7971d66">
+<ul class="org-ul">
+<li>Date and Time: August 28th 19:00 &#x2013;</li>
+<li>Restaurant: Uoku (魚喰)</li>
+<li>Address: 4-18, 3-chome, Nagate-cho, Nada-ku, Kobe, Hyogo, 657-0027</li>
+<li>TEL: (078) 842-5030</li>
+<li>URL: <a href="http://uoku.jp">http://uoku.jp</a></li>
+<li>Charge: 7,000 JPY (for faculty)，3,000 JPY (for student)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Takehide Soh</p>
+<p class="date">Created: 2019-09-01 日 15:48</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

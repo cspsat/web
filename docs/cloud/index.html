@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2016-02-03 水 10:09 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Takehide Soh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../myhome.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<style type="text/css">
+#table1 th { background-color: #3B5998; color: white;
+     border-style: solid; border-color: black; border-width: thin;
+     border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+     border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #3B5998; color: white; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+h1#aa {
+    border-color:#3B5998;
+    border-width:4px 0px 4px 0px;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:30px;
+    border-style:solid;
+    font-size:1.7em;
+}
+</style>
+
+
+<h1 id="aa" align="center">
+<font size="4">研究プロジェクト</font><br>
+クラウド上のソフトウェア最適配置問題の解法
+</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">概要</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+クラウド上の仮想マシン資源に必要なソフトウェア要素を適切に配置・相互接続し，さらに使用する資源を最小化する問題 （以下，ソフトウェア最適配置問題と呼ぶ）を考える．ソフトウェア最適配置問題は，小規模ならば簡単に解くことが可能だが，大規模になると組合せ爆発が生じ，単純なアルゴリズムで効率良く解くことは困難である．本研究では，大規模かつ実用的なソフトウェア最適配置問題を効率良く解くことを目的とし，その定式化および解法アルゴリズムの研究開発を行う．
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">情報</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>プロジェクト名
+<ul class="org-ul">
+<li>クラウド上のソフトウェア最適配置問題の解法
+</li>
+</ul>
+</li>
+<li>研究資金
+<ul class="org-ul">
+<li>平成27年度国立情報学研究所共同研究・戦略研究公募型
+</li>
+</ul>
+</li>
+<li>研究期間
+<ul class="org-ul">
+<li>2015年4月から2016年3月
+</li>
+</ul>
+</li>
+<li>メンバー（敬称略・順不同）
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">田村直之</td>
+<td class="left">研究代表者</td>
+<td class="left">神戸大学・情報基盤センター・教授</td>
+</tr>
+
+<tr>
+<td class="left">井上克巳</td>
+<td class="left">共同研究者</td>
+<td class="left">国立情報学研究所・情報学プリンシプル研究系・教授</td>
+</tr>
+
+<tr>
+<td class="left">番原睦則</td>
+<td class="left">共同研究者</td>
+<td class="left">神戸大学・情報基盤センター・准教授</td>
+</tr>
+
+<tr>
+<td class="left">鍋島英知</td>
+<td class="left">共同研究者</td>
+<td class="left">山梨大学・医学工学総合研究部・准教授</td>
+</tr>
+
+<tr>
+<td class="left">宋剛秀</td>
+<td class="left">共同研究者</td>
+<td class="left">神戸大学・情報基盤センター・助教</td>
+</tr>
+
+<tr>
+<td class="left">川原征大</td>
+<td class="left">共同研究者</td>
+<td class="left">神戸大学大学院・システム情報学研究科・博士課程前期課程学生</td>
+</tr>
+
+<tr>
+<td class="left">迫龍哉</td>
+<td class="left">共同研究者</td>
+<td class="left">神戸大学大学院・システム情報学研究科・博士課程前期課程学生</td>
+</tr>
+
+<tr>
+<td class="left">Le BERRE Daniel</td>
+<td class="left">共同研究者</td>
+<td class="left">Université d&rsquo;Artois・CNRS・教授</td>
+</tr>
+
+<tr>
+<td class="left">Di COSMO Roberto</td>
+<td class="left">共同研究者</td>
+<td class="left">Université Paris Diderot・PPS・教授</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">研究会合</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">国内</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>第1回全体会合 (詳細は<a href="http://kaminari.scitec.kobe-u.ac.jp/project/cspasp/kakenhi_mtg02.html">こちら</a>)
+<ul class="org-ul">
+<li>日時：2015年7月22日(水) 〜 23日(木)
+</li>
+<li>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 渕野グループ 小会議室(419号室) (<a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">アクセス</a>)
+</li>
+<li>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</li>
+<li>参加者：田村，井上，番原，鍋島，宋，川原，迫，寸田，南
+</li>
+</ul>
+</li>
+<li><del>第2回全体会合</del> (<font color="#bb4e4c"><b>11月20日治安情勢の変化により中止を決定</b></font>)
+<ul class="org-ul">
+<li>日時：2015年12月1日(火) 〜 2日(水)
+</li>
+<li>用務先：Universite Paris Diderot (パリ第7大学)
+</li>
+<li>用務地：5 rue Thomas-Mann, 75013 Paris, France
+</li>
+<li>参加者：田村，井上，鍋島，宋，Le BERRE, Di COSMO, Zwolakowski
+</li>
+</ul>
+</li>
+<li>第2回全体会合 (詳細は<a href="cld02.html">こちら</a>)
+<ul class="org-ul">
+<li>日時：2015年12月3日(木) 〜 4日(金)
+</li>
+<li>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 渕野グループ 小会議室(419号室) (<a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">アクセス</a>)
+</li>
+<li>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</li>
+<li>参加者：田村，井上，番原，鍋島，宋，迫
+</li>
+</ul>
+</li>
+
+<li>第3回会合 (詳細は<a href="cld03.html">こちら</a>)
+<ul class="org-ul">
+<li>日時：2015年2月5日(金)
+</li>
+<li>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 渕野グループ 小会議室(419号室) (<a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">アクセス</a>)
+</li>
+<li>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</li>
+<li>参加者：田村，井上，番原，宋，兼行，川原，迫
+</li>
+</ul>
+</li>
+
+<li>第4回全体会合-合同ミーティング (詳細は<a href="cld04.html">こちら</a>)
+<ul class="org-ul">
+<li>日時：2015年3月28日(月)，29日(火)
+</li>
+<li>用務先：熊本市民会館 (市民会館崇城大学ホール. <a href="http://www.city.kumamoto.jp/hpkiji/pub/detail.aspx?c_id=5&id=751">ホームページ</a>)
+</li>
+<li>用務地：〒860-0805 熊本市中央区桜町1番3号
+</li>
+<li>参加者：田村，井上，越村，番原，鍋島，宋，兼行，川原，迫，寸田，南（その他調整中)
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">国外</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>個別会合
+<ul class="org-ul">
+<li>日時：2016年1月12日(火)，13日(水)
+</li>
+<li>用務先：Universite d&rsquo;Artois
+</li>
+<li>用務地：Rue Jean Couvrez SP18 62307 Lens Cedex, France
+</li>
+<li>参加者：Le Berre, 宋
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">関係するプロジェクト</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><a href="http://www.edu.kobe-u.ac.jp/istc-tamlab/cspsat/index.html">CSPSAT2</a>
+</li>
+<li><a href="http://kaminari.scitec.kobe-u.ac.jp/project/cspasp/">CSPASP</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Takehide Soh</p>
+<p class="date">Created: 2016-02-03 水 10:09</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

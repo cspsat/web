@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/REC-html401/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="pragma" content="no-cache"><meta http-equiv="cache-control" content="no-cache">
+<title>CSPSAT Project</title><link rel="stylesheet" type="text/css" href="cspsat.css"></head>
+<body><h1 class="title">CSPSAT プロジェクト</h1>
+<!-- <div class="date">Last updated at Time-stamp: <2012-03-26 15:49:24 banbara></div> -->
+<center>
+<script language="JavaScript">
+<!--
+document.writeln('Last modified by Soh at ' + document.lastModified + ' (GMT)');
+// -->
+</script>
+</center>
+
+<h2>最新ニュース</h2>
+
+<dl>
+  <dt>2012年4月16日 [CSPSAT]
+  <dd><a href="seminar04/index.html">第4回CSPSAT&amp;ASP講演会</a>の情報を追加しました．
+  <dt>2012年3月2日 [CSPSAT]
+  <dd><a href="mtg12/index.html">第12回CSPSAT研究会</a>の情報を追加しました．
+  <dt>2011年11月15日 [CSPSAT]
+  <dd><a href="seminar03/index.html">第3回CSPSAT&amp;ASP講演会</a>の情報を追加しました．
+  <dd><a href="mtg11/index.html">第11回CSPSAT研究会</a>の情報を追加しました．
+  <dt>2011年6月22日 [COMPETITION]
+  <dd>2011 SAT Competition で鍋島先生の glueminisat 
+    (Application,  UNSAT, CPU time) が金メダルを獲得しました．
+    他に銀メダル2個も獲得．
+  <dd>2011 Max-SAT Evaluation で越村先生の QMaxSat が
+    Partial Max-SAT, Application で1位，
+    Partial Max-SAT, Crafted で2位 になりました．
+  <dt>2011年4月1日 [CSPSAT]
+  <dd>プロジェクトが最終年(4年目)に突入!
+
+</dl>
+
+<h3>バックナンバー</h3>
+<ul>
+  <li><a href="news2010.html">2010年度ニュース</a>
+  <li><a href="news2009.html">2009年度ニュース</a>
+  <li><a href="news2008.html">2008年度ニュース</a>
+</ul>
+
+<h2>プロジェクト概要</h2>
+
+<!-- <h3>要旨</h3> -->
+本プロジェクトの目的は，
+<b>制約最適化問題</b>と<b>制約充足問題</b> (以下まとめてCSPと呼ぶ)
+およびCSPを拡張した問題について，<b>SAT変換</b>に基づく並列SATソルバー
+による解法に着目し，実用的規模の問題を高速に解くための手法の研究，
+実証ソフトウェアの開発，および評価を行うことです．
+
+<h3>背景</h3>
+<p>
+CSPとは，与えられた制約条件を満たす解あるいは最適解を探索する問題です．
+CSPは，近年のSCMやERP等に代表される企業経営最適化を始めとした様々な産業分野に応用されているだけでなく，
+求解が非常に困難(NP困難)な問題としてソフトウェアにおける重要な研究課題となっており，
+欧米を中心として活発に研究が進められています．
+また，CSPを解くためのCSPソルバーも，
+フランスILOG社のソルバーを始めとして，欧米の大学等の研究機関で活発に研究開発が進められています．
+CSPの並列ソルバーについては，
+分散CSPに関する理論的研究は進展していますが，
+高速な求解を実現するための実装技術については，
+CSPに関する国際会議の発表等を見ても
+まだ研究が進んでいるとは言えません．
+</p>
+<p>
+一方，近年になって
+命題論理の充足可能性判定問題(<b>SAT問題</b>)を
+解く高速なSATソルバー(MiniSAT等)が開発されています．
+これを契機として，
+スケジューリング問題，プランニング問題，
+ハードウェア検証，
+ソフトウェア検証等の問題をSAT問題に変換して解く<b>SAT変換</b>の研究が盛んになり，
+大きな成功をおさめています．
+例えば，プランニング問題について現在最速のソルバーの1つは
+SAT変換に基づくSATPLANです．
+並列SATソルバーについては，CSPよりも問題が単純であることもあり，
+Rice大学のGridSATを始めとして徐々に研究が始まっており，
+有望なアプローチと考えられています．
+しかし，CSPのSAT変換結果であるSAT問題の並列処理方法については，
+まだ未知な部分の多い研究課題といえます．
+</p>
+
+<h3>具体的な研究テーマ (予定)</h3>
+
+<dl>
+  <dt>(A) SAT変換の研究
+    <dd>(A1) CSPのSAT変換
+    <dd>(A2) 動的CSPのSAT変換
+    <dd>(A3) 命題時相論理のSAT変換
+    <dd>(A4) 分散CSPのSAT変換
+  <dt>(B) SATソルバーの研究
+    <dd>(B1) DPLLに基づくSATソルバー
+    <dd>(B2) モデル生成に基づくSATソルバー
+  <dt>(C) 共有メモリ型並列ソルバーの研究
+    <dd>(C1) 学習節再利用方式の共有メモリ型並列ソルバー
+    <dd>(C2) アルゴリズム並列方式の共有メモリ型並列ソルバー
+  <dt>(D) 分散型並列ソルバーの研究
+    <dd>(D1) 学習節再利用方式の分散型並列ソルバー
+    <dd>(D2) 問題分割方式の分散型並列ソルバー
+</dl>
+
+<h3>学術的な特色</h3>
+
+<p>
+2001年のChaff，2003年のMiniSat等，SATソルバーの速度向上には目を見張るものがあり，
+SAT変換を用いた問題解決手法がプランニング問題，スケジューリング問題，
+ハードウェア検証，ソフトウェア検証等の分野で成功をおさめつつあります．
+その意味で，
+<b>SAT問題は求解が困難な問題に対するアセンブリ言語</b>として位置付けられようになってきました．
+したがって，本プロジェクトの目的は，
+<b>求解が困難な問題に対する並列求解方法について，有望なアプローチを提示すること</b>とも考えることができます．
+</p>
+
+<p>
+SAT変換に基づくCSPソルバーを，従来からのCSPソルバーと比較した場合，
+現状では，適用分野の拡大，大規模な問題への対応が問題となり，
+本プロジェクトでは，それらを重要な研究課題ととらえています．
+しかし，両者の研究内容は相反するものではなく，
+最近のCSPソルバーとSATソルバーの比較研究
+(Dimopoulos他 ``Propagation In CSP and SAT'', Proc. CP2006)にも見られる
+ように，
+将来的には両者の技術の融合が進むものと考えられます．
+</p>
+
+<h2>メンバー (順不同)</h2>
+
+<dl>
+  <dt><a href="http://bach.istc.kobe-u.ac.jp/tamura-jp.html">田村直之</a>，
+    神戸大学・情報基盤センター・教授</dt>
+  <dt><a href="http://research.nii.ac.jp/~ki/">井上克巳</a>，
+    国立情報学研究所・情報学プリンシプル研究系・教授</dt>
+  <dt><a href="http://www.iwlab.org/our-lab/our-staff/iw">岩沼宏治</a>，
+    山梨大学・ 医学工学総合研究部・教授</dt>
+  <dt>長谷川隆三，九州大学・システム情報科学研究院・教授</dt>
+  <dt><a href="http://lang.is.kyushu-u.ac.jp/~yokoo/index-j.html">横尾真</a>，
+    九州大学・システム情報科学研究院・教授</dt>
+  <dt><a href="http://www.ueda.info.waseda.ac.jp/~ueda/index-j.html">上田和紀</a>，
+    早稲田大学・理工学術院情報理工学科・教授</dt>
+  <dt><a href="http://www.jussien.me/njussien-eng/Welcome.html">Narendra Jussien</a>，
+    Ecole des Mines de Nantes</dt>
+  <dt>藤田博，九州大学・システム情報科学研究院・准教授</dt>
+  <dt>鍋島英知，山梨大学・医学工学総合研究部・准教授</dt>
+  <dt><a href="http://www.edu.kobe-u.ac.jp/fmsc-hrymlab/index-j.html">平山勝敏</a>，
+    神戸大学・海事科学研究科・准教授</dt>
+  <dt>越村三幸，九州大学・システム情報科学研究院・助教</dt>
+  <dt><a href="http://www.iwlab.org/our-lab/our-staff/yy">山本 泰生</a>，
+    山梨大学・医学工学総合研究部・助教</dt>
+  <dt><a href="http://kaminari.istc.kobe-u.ac.jp/banbara-jp.html">番原睦則</a>，
+    神戸大学・情報基盤センター・准教授</dt>
+</dl>
+
+<h2>講演会スケジュール</h2>
+
+<h3>2012年度</h3>
+
+<dl>
+  <dt>第4回CSPSAT&amp;ASP講演会
+    <!-- <font color="red">[終了]</font>-->
+    <a href="seminar04/index.html">[詳細]</a> 
+    <dd>日時：2012年5月21日(月) 〜 22日(火)
+    <dd>講演者：
+      <a href="http://www.cs.bgu.ac.il/~mcodish/">Michael Codish</a>
+      (Ben-Gurion University of the Negev) and
+      <a href="http://www.public.asu.edu/~cbaral/">Chitta Baral</a>
+      (Arizona State University)
+    <dd>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 渕野グループ プレゼンテーション室(421号室)
+      <a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">
+	(アクセス方法)</a>
+    <dd>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</dl>
+
+
+<h3>2011年度</h3>
+
+<dl>
+  <dt>第3回CSPSAT&amp;ASP講演会 <font color="red">[終了]</font>
+    <a href="seminar03/index.html">[詳細]</a>
+    <dd>日時：2011年11月21日(月) 〜 22日(火)
+    <dd>講演者：Torsten Schaub 氏ほか
+    <dd>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 渕野グループ プレゼンテーション室(421号室)
+      <a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">
+	(アクセス方法)</a>
+    <dd>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</dl>
+
+<h3>2010年度</h3>
+
+<dl>
+  <dt>第2回CSPSAT講演会 <font color="red">[終了]</font>
+    <a href="seminar02/index.html">[詳細]</a>
+    <dd>日時：2010年11月8日(月) 〜 9日(火)
+    <dd>講演者：Pavel Surynek 氏
+    <dd>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 渕野グループ プレゼンテーション室(421号室)
+      <a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">
+	(アクセス方法)</a>
+    <dd>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</dl>
+
+<h3>2009年度</h3>
+
+<dl>
+  <dt>第1回CSPSAT講演会 <font color="red">[終了]</font>
+    <a href="seminar01/index.html">[詳細]</a>
+    <dd>日時：2010年2月4日(木) 15:00 〜
+    <dd>講演者：Reiner Hähnle教授，Niklas Sörensson氏
+    <dd>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 新井プロジェクト プレゼンテーション室(421号室)
+      <a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">
+	(アクセス方法)</a>
+    <dd>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</dl>
+
+<h2>研究会スケジュール</h2>
+
+<h3>2011年度</h3>
+
+<dl>
+  <dt>第10回CSPSAT研究会<font color="red">[終了]</font>
+    <a href="mtg10/index.html">[詳細]</a>
+    <dd>日時：2011年8月17日(水) 〜 19日(金)
+    <dd>用務先：<a href="http://www.kyushu-u.ac.jp/university/institution-use/nishijin/index.htm">
+      九州大学西新プラザ</a>・中会議室
+    <dd>用務地：〒814-0002 福岡市早良区西新2-16-23
+
+  <dt>第11回CSPSAT研究会<font color="red">[終了]</font> 
+    <a href="mtg11/index.html">[詳細]</a>
+    <dd>日時：2011年11月30日(水) 〜 12月02日(金)
+    <dd>用務先：下呂市民会館 第2，第3研修室
+    <dd>用務地：〒509-2202 岐阜県下呂市森801-10
+
+  <dt>第12回CSPSAT研究会<font color="red">[終了]</font>
+    <a href="mtg12/index.html">[詳細]</a>
+    <dd>日時：2012年3月19日(月) 〜 21日(水)
+    <dd>用務先：由布市 湯布院公民館 視聴覚室
+    <dd>用務地：〒879-5102 大分県由布市湯布院町川上3758-1
+</dl>
+
+<h3>2010年度</h3>
+
+<dl>
+  <dt>第7回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg07/index.html">[詳細]</a>
+    <dd>日時：2010年7月26日(月) 〜 28日(水)
+    <dd>用務先：横谷温泉旅館
+    <dd>用務地：〒391-0301 長野県茅野市北山5513
+
+  <dt>第8回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg08/index.html">[詳細]</a>
+    <dd>日時：2010年12月21日(火) 〜 23日(木)
+    <dd>用務先：<a href="http://www.kyushu-u.ac.jp/university/institution-use/nishijin/index.htm">
+      九州大学西新プラザ</a>・中会議室
+    <dd>用務地：〒814-0002 福岡市早良区西新2-16-23
+
+  <dt>第9回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg09/index.html">[詳細]</a>
+    <dd>日時：2011年3月17日(木) 〜 3月19日(土)
+    <dd>用務先：神戸大学 自然科学総合研究棟3号館(東) 4F，
+      渕野グループ，プレゼンテーション室 (421号室)
+      <a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">
+	(アクセス方法)</a>
+    <dd>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+</dl>
+
+
+<h3>2009年度</h3>
+
+<dl>
+  <dt>第4回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg04/index.html">[詳細]</a>
+    <dd>日時：2009年7月28日(火) 〜 30日(木)
+    <dd>用務先：ホテルニューアワジ プラザ淡路島 会議室
+      <a href="http://www.newawaji.com/plaza/access2006.html">(アクセス方法)</a>
+    <dd>用務地：〒656-0542 兵庫県南あわじ市阿万吹上
+  <dt>第5回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg05/index.html">[詳細]</a>
+    <dd>日時：2009年11月30日(月) 〜 12月02日(水)
+    <dd>用務先：レイクランドホテル みづのさと
+    <dd>用務地：〒401-0302 山梨県南都留郡富士河口湖町小立1070
+  <dt>第6回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg06/index.html">[詳細]</a>
+    <dd>日時：2010年3月28日(日) 〜 3月30日(火)
+    <dd>用務先：鹿児島県市町村自治会館
+    <dd>用務地：〒890-0064 鹿児島市鴨池新町7番4号(県庁前)
+</dl>
+
+<h3>2008年度</h3>
+
+<dl>
+  <dt>第1回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg01/index.html">[詳細]</a>
+    <dd>日時：2008年8月21日(木) 〜 22日(金)
+    <dd>用務先：神戸大学 自然科学総合研究棟3号館(東)4F 新井プロジェクト プレゼンテーション室(421号室)
+      <a href="http://kaminari.istc.kobe-u.ac.jp/map/arai_project_j.jpeg">
+	(アクセス方法)</a>
+    <dd>用務地：〒657-8501 兵庫県神戸市灘区六甲台町1-1
+    <dd>最寄り駅：(JR東海道・山陽本線)六甲道 or (阪急神戸本線)六甲
+    <dd>
+  <dt>第2回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg02/index.html">[詳細]</a>
+    <dd>日時：2008年12月1日(月) 〜 2日(火) 
+    <dd>用務先：国立情報学研究所(NII)  会議室(1210, 203)
+      <a href="http://www.nii.ac.jp/introduce/access1-j.shtml">(アクセス方法)</a>
+    <dd>用務地：〒101-8430 東京都千代田区一ツ橋2-1-2
+    <dd>最寄り駅：
+      東京メトロ半蔵門線・都営地下鉄三田線・新宿線「神保町」A8出口，
+      or
+      東京メトロ東西線「竹橋」1b出口
+    <dd>
+  <dt>第3回CSPSAT研究会 <font color="red">[終了]</font>
+    <a href="mtg03/index.html">[詳細]</a>
+    <dd>日時：2009年3月12日(木) 〜 14日(土) 
+    <dd>用務先：<a href="http://www.kyushu-u.ac.jp/university/institution-use/nishijin/index.htm">
+      九州大学西新プラザ</a>・中会議室
+    <dd>用務地：〒814-0002 福岡市早良区西新2-16-23
+    <dd>
+</dl>
+
+<h2>研究資金</h2>
+
+<dl>
+  <dt>科学研究費補助金 基盤研究(A)
+    <dd>研究課題名：制約最適化問題のSAT変換による解法とその並列分散処理に関する研究
+    <dd>研究期間：2008年度 〜 2011年度
+    <dd>課題番号：20240003 
+    <dd>研究代表者：田村直之
+    <dd>研究分担者：井上克巳，岩沼宏治，鍋島英知，横尾真，長谷川隆三，
+      越村三幸，平山勝敏，番原睦則
+    <dd>研究分担者 (2010年度から)：上田和紀，藤田博，山本泰生
+</dl>
+
+<h2>ソフトウェア</h2>
+<ul>
+  <li><a href="http://bach.istc.kobe-u.ac.jp/sugar/">
+      Sugar: SAT変換による制約ソルバー</a>
+</ul>
+
+<h2>研究業績</h2>
+
+<ul>
+  <li><a href="paper/index.html">研究業績リスト</a>
+</ul>
+
+<h2>参考文献一覧 (2009年11月5日版)</h2>
+
+<ul>
+  <li><a href="bib/aisat.html">HTMLファイル</a>
+  <li><a href="bib/aisat.bib">BibTeXファイル (文字コードEUC)</a>
+</ul>
+
+<h2>その他</h2>
+<ul>
+  <li><a href="https://www.edu.kobe-u.ac.jp/istc-tamlab/cspsat/internal_information/index.html">内部資料</a> (管理者only)
+</ul>
+<hr>
+<!-- <img width="20%" src="banbara.png"><br> -->
+<img width="20%" src="soh.png"><br>
+<img src="http://cgi.center.kobe-u.ac.jp:8000/cgi-bin/Count.cgi?df=svc00652-cspsat.dat|dd=C" align=absmiddle>
+<font size="-1">since 24th March 2009</font>
+</body>
+</html>

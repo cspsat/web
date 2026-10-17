@@ -1,0 +1,273 @@
+body {
+    font-family: sans-serif;
+    font: normal;
+    margin:0px auto;
+    width:900px;
+    background-color:#e5e5c9;
+}
+
+.contents {
+    width:800px;
+    padding:50px;
+    padding-top:5px;
+    background-color:#ffffff;
+}
+
+p {
+    line-height:1.5em;
+    padding-left:10px;
+}
+
+td.menu {
+    line-height:1.5em;
+    text-align:center;
+    font-size:1em;
+    margin:0px;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+td.menu a {
+/*     color:#616161; */
+    color:#FFFFFF;
+    text-decoration:none;
+    display:block;
+    width:190px;
+    margin:0px;
+    padding:5px;
+}
+
+td.menu a:hover {
+/*     background-color:#c5e1ed; */
+    margin:0px;
+    color:#000000;
+}
+
+td.en_name {
+    width:140px;
+    line-height:1.5em;
+    height:50px;
+    }
+td.en_post {
+    width:160px;
+    line-height:1.5em;
+    height:50px;
+    }
+td.en_affi {
+    width:440px;
+    line-height:1.5em;
+    height:50px;
+    }
+td.pic {
+    width:30%;
+}
+
+td.name {
+    width:70%;
+    text-align:center;
+}
+
+td.intro {
+    width:640px;
+}
+
+table {
+    border:none;
+    font-size:1em;
+}
+
+table.member {
+    padding-left:10px;
+}
+
+dl {
+    padding-left: 10px;
+}
+
+h2 {
+    padding-left:4px;
+    /* border-color:#BB4E4C; */
+    border-color:#6576CC;
+    border-width:2px 2px 2px 16px;
+    border-style:solid;
+}
+
+h3 {
+    padding-left:4px;
+    border-color:#6576CC;
+    border-width:0 0 0 12px;
+    border-style:solid;
+}
+
+td.button2 a {
+    text-decoration:none;
+    margin:0px;
+    font-size:0.9em;
+    text-align:center;
+    border-width:0 0 0 1px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 0 5px 0 5px;
+    color:#000000;
+}
+
+td.button2 a:hover {
+/*     background-color:#c5e1ed; */
+    margin:0px;
+    color:#6576CC;
+}
+
+/* org mode 用 */
+
+/* .content { */
+/*     width:800px; */
+/*     padding:50px; */
+/*     padding-top:5px; */
+/*     background-color:#e5e5c9; */
+/* } */
+
+div#content {
+    width:800px;
+    padding:50px;
+    padding-top:5px;
+    /* background-color:#e5e5c9; */
+    background-color:#ffffff;
+}
+
+div#postamble {
+    width:800px;
+    padding:10px 50px 50px 50px;
+    /* background-color:#e5e5c9; */
+    font-size:0.7em;
+    background-color:#ffffff;
+}
+
+div#postamble a {
+    padding:0px;
+    margin:0px;
+}
+
+p.date {
+    border-style:solid;
+    /* border-color:#BB4E4C; */
+    border-color:#6576CC;
+    border-width:3px 0 0 0;
+    padding:3px 0 0 0;
+    margin:0px;
+}
+
+p.author {
+    padding:0px;
+    margin:0px;
+}
+
+p.creator {
+    padding:0px;
+    margin:0px;
+}
+
+span.done {
+    color:green;
+}
+
+span.todo {
+    color:red;
+}
+
+
+/* リスト */
+ol, ul {
+    padding-left: 2em;
+}
+ol li {
+    /* レベル 1 の数付きリストには数字の横に線を付けてみる */
+    border-left: 1px solid #d0d0d0;
+    padding-left: 0.5em;
+}
+ol li ol li{
+    /* レベル 2 以下の数付きリストには数字の横に線を付けない */
+    border: none;
+    padding-left: 0em;
+}
+ul li {
+    border: none;
+}
+dt {
+    font-weight: normal;
+    border-left: 0.5em solid #c00000;
+    border-bottom: 1px dotted #c00000;
+    padding-left: 0.3em;
+    margin: 0.3em 0em;
+    width: 50%;
+}
+
+/* 文字装飾 */
+b {
+    color: #6576CC;
+}
+i {
+    color: #600000;
+}
+code {
+    color: #600000;
+}
+del {
+    color: #608080;
+}
+
+/* ソース、例文 */
+pre
+{
+  background: gainsboro;
+  font-family: monospace;
+  font-weight: normal;
+  font-style: normal;
+  white-space: pre;
+  line-height: 1.1;
+  margin-left: 1em;
+  margin-right: 0em;
+  padding: 0.5em;
+  overflow: auto;
+}
+
+/* pre { */
+/*     font-family: "Franklin Gothic Medium","arial","Source Code Pro","Tahoma","Osaka-Mono",'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',monospace; */
+/*     font-size: medium; */
+/*     margin: 0.5em; */
+/*     padding: 0.5em; */
+/* } */
+
+/* pre.src */
+/* { */
+/*   background: #eeeeee; */
+/*   color: black; */
+/* } */
+/* pre.src .linenr {  } */
+/* pre.src .org-keyword { font-weight: bold; color: #880000; } */
+/* pre.src .org-constant { color: #008800; } */
+/* pre.src .org-type { color: #000088; } */
+/* pre.src .org-function-name { color: #008888; } */
+/* pre.src .org-variable-name { color: #004444; } */
+/* pre.src .org-string { color: #880088; } */
+
+pre.src
+{
+  background: #f3f3e3;
+  color: black;
+}
+pre.src .linenr {  }
+pre.src .org-keyword { font-weight: bold; color: #880000; }
+pre.src .org-constant { color: #008800; }
+pre.src .org-type { color: #000088; }
+pre.src .org-function-name { color: #008888; }
+pre.src .org-variable-name { color: #004444; }
+pre.src .org-string { color: #880088; }
+
+pre.example {
+    background-color: #f0d0d0;
+    border-top: 2px solid #804040;
+    border-left: 2px solid #804040;
+    border-bottom: 2px solid #d0a0a0;
+    border-right: 2px solid #d0a0a0;
+}

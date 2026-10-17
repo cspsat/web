@@ -1,0 +1,584 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>Publications on CSPSAT Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+<!--
+// QuickSearch script for JabRef HTML export 
+// Version: 2.0
+//
+// Copyright (c) 2006-2008, Mark Schenk
+//
+// This software is distributed under a Creative Commons Attribution 3.0 License
+// http://creativecommons.org/licenses/by/3.0/
+
+// Some features:
+// + allows RegExp searches
+//   e.g. to search for entries between 1980 and 1989, type:  198[0-9]
+//   e.g. for any entry ending with 'symmetry', type:  symmetry$
+//   e.g. for all reftypes that are books: ^book$, or ^article$
+//   e.g. for entries by either John or Doe, type john|doe
+
+// Speed optimisation introduced some esoteric problems with certain RegExp searches
+// e.g. if the previous search is 200[-7] and the next search is 200[4-7] then the search doesn't work properly until the next 'keyup'
+// hence the searchOpt can be turned off for RegExp adepts
+var searchOpt = true;
+
+if (window.addEventListener) {
+	window.addEventListener("load",initSearch,false); }
+else if (window.attachEvent) {
+	window.attachEvent("onload", initSearch); }
+
+function initSearch() {
+	// basic object detection
+	if(!document.getElementById || !document.getElementsByTagName) { return; }
+	if (!document.getElementById('qstable')||!document.getElementById('qs')) { return; }
+
+	// find QS table and appropriate rows
+	searchTable = document.getElementById('qstable');
+	var allRows = searchTable.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+	// split all rows into entryRows and infoRows (e.g. abstract, review, bibtex)
+	entryRows = new Array();
+	infoRows = new Array();
+
+	for (var i=0, k=0, j=0; i<allRows.length;i++) {
+		if (allRows[i].className.indexOf('entry') != -1) {
+			entryRows[j++] = allRows[i];
+		} else {
+			infoRows[k++] = allRows[i];		
+		}
+	}
+
+	//number of entries and rows
+	numRows = allRows.length;
+	numEntries = entryRows.length;
+	numInfo = infoRows.length;
+
+	//find the query field
+	qsfield = document.getElementById('qsfield');
+
+	// previous search term; used for speed optimisation
+	prevSearch = '';
+
+	//find statistics location
+	stats = document.getElementById('stat');
+	setStatistics(-1);
+
+	// shows the searchfield
+	document.getElementById('qs').style.display = 'block';
+	document.getElementById('qsfield').onkeyup = testEvent;
+}
+
+function quickSearch(tInput){
+
+	 if (tInput.value.length == 0) {
+		showAll();
+		setStatistics(-1);
+		qsfield.className = '';
+		return;
+	} else {
+		// only search for valid RegExp
+		try {
+			var searchText = new RegExp(tInput.value,"i")
+			closeAllInfo();
+			qsfield.className = '';
+		}
+		catch(err) {
+			prevSearch = tInput.value;
+			qsfield.className = 'invalidsearch';
+			return;
+		}
+	}
+	
+	// count number of hits
+	var hits = 0;
+
+	// start looping through all entry rows
+	for (var i = 0; cRow = entryRows[i]; i++){
+
+		// only show search the cells if it isn't already hidden OR if the search term is getting shorter, then search all
+		// some further optimisation is possible: if the search string is getting shorter, and the row is already visible, skip it. Future work.
+		if(!searchOpt || cRow.className.indexOf('noshow')==-1 || tInput.value.length <= prevSearch.length){
+			var found = false; 
+
+			var inCells = cRow.getElementsByTagName('td');
+			var numCols = inCells.length;
+				
+			for (var j=0; j<numCols; j++) {
+				cCell = inCells[j];
+				var t = cCell.innerText?cCell.innerText:getTextContent(cCell);
+				if (t.search(searchText) != -1){ 
+					found=true; 
+					break;
+				} 
+			}
+			
+			if(found) {
+				cRow.className = 'entry show';
+				hits++;
+			} else {
+				cRow.className = 'entry noshow';
+			}
+		}
+	}
+
+	// update statistics
+	setStatistics(hits)
+	
+	// set previous search value
+	prevSearch = tInput.value;
+}
+
+function setStatistics (hits) {
+	if(hits < 0) { hits=numEntries; }
+	if(stats) { stats.firstChild.data = hits + '/' + numEntries}
+}
+
+function getTextContent(node) {
+	// Function written by Arve Bersvendsen
+	// http://www.virtuelvis.com
+	
+	if (node.nodeType == 3) {
+	return node.nodeValue;
+	} // text node
+	if (node.nodeType == 1) { // element node
+	var text = [];
+	for (var chld = node.firstChild;chld;chld=chld.nextSibling) {
+		text.push(getTextContent(chld));
+	}
+	return text.join("");
+	} return ""; // some other node, won't contain text nodes.
+}
+
+function showAll(){
+	// first close all abstracts, reviews, etc.
+	closeAllInfo();
+
+	for (var i = 0; i < numEntries; i++){
+		entryRows[i].className = 'entry show'; 
+	}
+}
+
+function closeAllInfo(){
+	for (var i=0; i < numInfo; i++){
+		if (infoRows[i].className.indexOf('noshow') ==-1) {
+			infoRows[i].className = infoRows[i].className + ' noshow';
+		}
+	}
+}
+
+function testEvent(e){
+	if (!e) var e = window.event;
+	quickSearch(this);
+}
+
+function clearQS() {
+	qsfield.value = '';
+	quickSearch(qsfield);
+}
+
+function redoQS(){
+	showAll();
+	quickSearch(qsfield);
+}
+-->
+</script>
+<style type="text/css">
+body { background-color: white; font-family: "Trebuchet MS", Arial, sans-serif; font-size: 12px; line-height: 1.2; padding: 1em; color: #2E2E2E; }
+
+#qs { width: auto; border-style: solid; border-color: gray; border-width: 1px 1px 0px 1px; padding: 0.5em 0.5em; display:none;  }
+#qs form { padding: 0px; margin: 0px; }
+#qs form p { padding: 0px; margin: 0px; }
+
+.invalidsearch { background-color: red; }
+
+table { border: 1px gray solid; width: 100%; empty-cells: show; }
+th, td { border: 1px gray solid; padding: 0.5em; vertical-align: top;  }
+td { text-align: left; vertical-align: top; }
+th { background-color: #EFEFEF; }
+
+td a { color: navy; text-decoration: none; }
+td a:hover  { text-decoration: underline; }
+
+tr.noshow { display: none;}
+
+@media print {
+	p.infolinks, #qssettings, #qs { display: none !important; }
+	table { border-width: 0px; }
+	tr { page-break-inside: avoid; }
+	tr > * + * + * + * + * {display: none; }
+	thead tr::before { content: "Reference"; border: 1px gray solid; padding: 0.5em; vertical-align: top; font-weight: bold; text-align: center; display: table-cell; background-color: #EFEFEF; }
+	tr[id]::before { content: attr(id); display: table-cell; border: 1px gray solid; padding: 0.5em; vertical-align: top; font-style: italic; }
+}
+</style>
+</head>
+<body>
+
+<div id="qs"><form action="index.html"><p>QuickSearch: <input type="text" name="qsfield" id="qsfield" autocomplete="off" title="Allows plain text as well as RegExp searches" /><input type="button" onclick="clearQS()" value="clear" />&nbsp; Number of matching entries: <span id="stat">0</span>.</p></form></div>
+<table id="qstable" border="1">
+<thead><tr><th width="20%">Author</th><th width="30%">Title</th><th width="5%">Year</th><th width="30%">Journal/Proceedings</th><th width="10%">Reftype</th><th width="5%">DOI/URL</th></tr></thead>
+<tbody><tr id="Nabeshima:JSAI:2010" class="entry">
+	<td>鍋島英知</td>
+	<td>SATによるプランニングとスケジューリング</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 114-121&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="BanbaraT:JSAI:2010" class="entry">
+	<td>番原睦則 &amp; 田村直之</td>
+	<td>SATによるシステム検証</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 122-129&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="HirayamaY:JSAI:2010" class="entry">
+	<td>平山勝敏 &amp; 横尾真</td>
+	<td>$*$-SAT: SATの拡張</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 105-113&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="InoueT:JSAI:2010" class="entry">
+	<td>井上 克巳 &amp; 田村 直之</td>
+	<td>SATソルバーの基礎</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 57-67&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="IwanumaN:JSAI:2010" class="entry">
+	<td>岩沼宏治 &amp; 鍋島英知</td>
+	<td>SMT：個別理論を取り扱うSAT技術</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 86-95&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="NabeshimaS:JSAI:2010" class="entry">
+	<td>鍋島英知 &amp; 宋剛秀</td>
+	<td>高速SATソルバーの原理</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 68-76&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Hirayama:IEICE:2009" class="entry">
+	<td>黒田 陽之 &amp; 平山 勝敏</td>
+	<td>Multi-MaxSAT: ラグランジュ分解・調整法を用いたWeighted Max-SAT問題の解法</td>
+	<td>2009</td>
+	<td>電子情報通信学会論文誌D<br/>Vol. J92-D(1), pp. 51-60&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Inoue:ComputerSoftware:2008" class="entry">
+	<td>井上 克巳 &amp; 坂間 千秋</td>
+	<td>論理プログラミングから解集合プログラミングへ</td>
+	<td>2008</td>
+	<td>コンピュータソフトウェア<br/>Vol. 25(3), pp. 20-32&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="HasegawaFK:JSAI:2010" class="entry">
+	<td>長谷川隆三, 藤田博 &amp; 越村三幸</td>
+	<td>モデル列挙とモデル計数</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 96-104&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="TamuraTB:JSAI:2010" class="entry">
+	<td>田村直之, 丹生智也 &amp; 番原睦則</td>
+	<td>制約最適化問題とSAT符号化</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(1), pp. 77-85&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:ComputerSoftware:2008A" class="entry">
+	<td>櫻井 祐子, 岩崎 敦 &amp; 横尾 真</td>
+	<td>適切な掲載数を決定するキーワード広告オークションプロトコルの提案</td>
+	<td>2008</td>
+	<td>コンピュータソフトウェア<br/>Vol. 25(4), pp. 60-67&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="SakuraiSIY:IEICE:2009" class="entry">
+	<td>櫻井祐子, 斎藤恭昌, 岩崎敦 &amp; 横尾真</td>
+	<td>Take-it-or-Leave-it方式の再配分オークションメカニズムの提案</td>
+	<td>2009</td>
+	<td>電子情報通信学会論文誌<br/>Vol. J92-D(11), pp. 1861-1868&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="SakuraiYIS:IEICE:2009" class="entry">
+	<td>櫻井祐子, 横尾真, 岩崎敦 &amp; 鈴木幸太郎</td>
+	<td>セキュアキーワード広告オークションプロトコルの提案</td>
+	<td>2009</td>
+	<td>電子情報通信学会論文誌<br/>Vol. J92-D(11), pp. 1881-1889&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Todo:IEICE:2009" class="entry">
+	<td>東藤大樹, 岩崎敦, 横尾真 &amp; 櫻井祐子</td>
+	<td>架空名義操作不可能な組合せオークションの割当規則の特性</td>
+	<td>2009</td>
+	<td>電子情報通信学会論文誌<br/>Vol. J92-D(11), pp. 1890-1901&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Name:CONF:2009" class="entry">
+	<td>大田直樹, 佐藤恭史, 岩崎敦, 横尾真 &amp; Conitzer, V.</td>
+	<td>匿名操作不可能シャプレイ値：開環境での協力ゲームへのシャプレイ値の拡張</td>
+	<td>2009</td>
+	<td>コンピュータソフトウェア<br/>Vol. 26(4), pp. 181-196&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Ohta:IPSJ:2009" class="entry">
+	<td>大田直樹, 岩崎敦, 横尾 真, Conitzer, V. &amp; Sandholm, T.</td>
+	<td>開環境での協力ゲームにおける解の簡略記述法</td>
+	<td>2009</td>
+	<td>情報処理学会論文誌<br/>Vol. 50(12), pp. 3211-3221&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:ComputerSoftware:2008C" class="entry">
+	<td>斎藤 恭昌, 岩崎 敦, 横尾 真, Kempe, D. &amp; Salek, M.</td>
+	<td>チーム選択問題のための架空名義操作不可能なオークションメカニズムの提案</td>
+	<td>2008</td>
+	<td>コンピュータソフトウェア<br/>Vol. 25(4), pp. 199-207&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:ComputerSoftware:2008B" class="entry">
+	<td>田崎 誠, 籔 悠一, 横尾 真, Varakantham, P., Marecki, J. &amp; Tambe, M.</td>
+	<td>マルチエージェント部分観測可能マルコフ決定過程のプラン構築への通信の導入</td>
+	<td>2008</td>
+	<td>コンピュータソフトウェア<br/>Vol. 25(4), pp. 226-237&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Matsui:JSAI:2010" class="entry">
+	<td>松井俊浩, Silaghi, M.C., 平山勝敏, 横尾真 &amp; 松尾啓志</td>
+	<td>分散制約最適化問題へのソフトアーク整合の適用</td>
+	<td>2010</td>
+	<td>人工知能学会論文誌<br/>Vol. 25(3), pp. 410-422&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Matsui:JSAI:2009" class="entry">
+	<td>松井俊浩, Silaghi, M.C., 平山勝敏, 横尾真 &amp; 松尾啓志</td>
+	<td>資源制約に束縛されないpseudo-treeを用いた資源制約付き分散制約最適化問題の解法</td>
+	<td>2009</td>
+	<td>人工知能学会論文誌<br/>Vol. 24(5), pp. 417-427&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Hirayama:AAMAS:2009" class="entry">
+	<td>Hirayama, K., Matsui, T. &amp; Yokoo, M.</td>
+	<td>Adaptive Price Update in Distributed Lagrangian Relaxation Protocol</td>
+	<td>2009</td>
+	<td>8th International Joint Conference on Autonomous Agents &amp; Multi-Agent Systems (AAMAS-2009), pp. 1033-1040&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Hirayama:AAMAS:2009A" class="entry">
+	<td>Hirayama, K., Matsui, T. &amp; Yokoo, M.</td>
+	<td>Adaptive Price Update in Distributed Lagrangian Relaxation Protocol</td>
+	<td>2009</td>
+	<td>8th International Conference on Autonomous Agents and Multiagent Systems (AAMAS-2009)&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Jain:IJCAI:2009" class="entry">
+	<td>Jain, M., Taylor, M., Tambe, M. &amp; Yokoo, M.</td>
+	<td>DCOPs Meet the RealWorld: Exploring Unknown Reward Matrices with Applications to Mobile Sensor Networks</td>
+	<td>2009</td>
+	<td>International Joint Conference on Artificial Intelligence (IJCAI-2009), pp. 181-186&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Koshimura:FTP:2009" class="entry">
+	<td>Koshimura, M., Nabeshima, H., Fujita, H. &amp; Hasegawa, R.</td>
+	<td>Minimal Model Generation with Respect to an Atom Set</td>
+	<td>2009</td>
+	<td>7th International Workshop on First-Order Theorem Proving (FTP 2009), pp. 49-59&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:AAMAS:2008A" class="entry">
+	<td>Marecki, J., Gupta, T., Varakantham, P., Tambe, M. &amp; Yokoo, M.</td>
+	<td>Not All Agents Are Equal: Scaling up Distributed POMDPs for Agent Networks</td>
+	<td>2008</td>
+	<td>7th International Joint Conference on Autonomous Agents and Multi-Agent System (AAMAS-2008), pp. 485-492&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Hirayama:AAMAS:2009B" class="entry">
+	<td>Matsui, T., Silaghi, M., Hirayama, K., Yokoo, M. &amp; Matsuo, H.</td>
+	<td>Directed Soft Arc Consistency in Pseudo-trees</td>
+	<td>2009</td>
+	<td>8th International Conference on Autonomous Agents and Multiagent Systems (AAMAS-2009)&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Matsui:AAMAS:2009" class="entry">
+	<td>Matsui, T., Silaghi, M., Hirayama, K., Yokoo, M. &amp; Matsuo, H.</td>
+	<td>Directed Soft Arc Consistency in Pseudo Trees</td>
+	<td>2009</td>
+	<td>8th International Joint Conference on Autonomous Agents &amp; Multi-Agent Systems (AAMAS-2009), pp. 1065-1072&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Hirayama:AAAI:2008" class="entry">
+	<td>Matsui, T., Silaghi, M., Hirayama, K., Yokoo, M. &amp; Matsuo, H.</td>
+	<td>Resource Constrained Distributed Constraint Optimization with Virtual Variables</td>
+	<td>2008</td>
+	<td>23rd AAAI Conference on Artificial Intelligence (AAAI-2008), pp. 120-125&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="NabeshimaII:JSAI:2010" class="entry">
+	<td>Nabeshima, H., Iwanuma, K. &amp; Inoue, K.</td>
+	<td>SOLAR: An Automated Deduction System for Consequence Finding</td>
+	<td>2010</td>
+	<td>AI Communications<br/>Vol. 23(2-3), pp. 183-203&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Ohta:CP:2009" class="entry">
+	<td>Ohta, N., Conitzer, V., Ichimura, R., Sakurai, Y., Iwasaki, A. &amp; Yokoo, M.</td>
+	<td>Coalition Structure Generation Utilizing Compact Characteristic Function Representations</td>
+	<td>2009</td>
+	<td>15th International Conference on Principles and Practice of Constraint Programming (CP-2009), pp. 623-638&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:AAMAS:2008B" class="entry">
+	<td>Ohta, N., Conitzer, V., Satoh, Y., Iwasaki, A. &amp; Yokoo, M.</td>
+	<td>Anonymity-Proof Shapley Value: Extending Shapley Value for Coalitional Games in Open Environments</td>
+	<td>2008</td>
+	<td>7th International Joint Conference on Autonomous Agents and Multi-Agent System (AAMAS-2008), pp. 927-934&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:IAT:2008C" class="entry">
+	<td>Sakurai, Y., Iwasaki, A. &amp; Yokoo, M.</td>
+	<td>Keyword Auction Protocol for Dynamically Adjusting the Number of Advertisements</td>
+	<td>2008</td>
+	<td>IEEE/WIC/ACM International Conference on Intelligent Agent Technology (IAT-2008), pp. 410-416&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:IAT:2008B" class="entry">
+	<td>Sakurai, Y., Saito, Y., Iwasaki, A. &amp; Yokoo, M.</td>
+	<td>Beyond quasi-linear utility: strategy/false-name-proof multi-unit auction protocols</td>
+	<td>2008</td>
+	<td>IEEE/WIC/ACM International Conference on Intelligent Agent Technology (IAT-2008), pp. 417-423&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Seow:IEEECST:2009" class="entry">
+	<td>Seow, K.T., Ma, C. &amp; Yokoo, M.</td>
+	<td>Coordination Planning: Applying Control Synthesis Methods for a Class of Distributed Agents</td>
+	<td>2009</td>
+	<td>IEEE Transactions on Control Systems Technology<br/>Vol. 17(2), pp. 405-415&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Silaghi:AAMAS:2009" class="entry">
+	<td>Silaghi, M.C. &amp; Yokoo, M.</td>
+	<td>ADOPT-ing: Unifying Asynchronous Distributed Optimization with Asynchronous Backtracking</td>
+	<td>2009</td>
+	<td>Journal of Autonomous Agents and Multi-Agent Systems<br/>Vol. 19(2), pp. 89-123&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Soh:FI:9999" class="entry">
+	<td>Soh, T., Inoue, K., Tamura, N., Banbara, M. &amp; Nabeshima, H.</td>
+	<td>A SAT-based Method for Solving the Two-dimensional Strip Packing Problem</td>
+	<td>(to appear)</td>
+	<td>Fundamenta Informaticae&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Inoue:RCRA:2008" class="entry">
+	<td>Soh, T., Inoue, K., Tamura, N., Banbara, M. &amp; Nabeshima, H.</td>
+	<td>A SAT-based Method for Solving the Two-dimensional Strip Packing Problem</td>
+	<td>2008</td>
+	<td>15th RCRA workshop on Experimental Evaluation of Algorithms for Solving Problems with Combinatorial Explosion (RCRA'08)&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Tamura:Constraints:2009" class="entry">
+	<td>Tamura, N., Taga, A., Kitagawa, S. &amp; Banbara, M.</td>
+	<td>Compiling Finite Linear CSP into SAT</td>
+	<td>2009</td>
+	<td>Constraints<br/>Vol. 14(2), pp. 254-272&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Tamura:CONSTRAINTS:2009" class="entry">
+	<td>Tamura, N., Taga, A., Kitagawa, S. &amp; Banbara, M.</td>
+	<td>Compiling Finite Linear CSP into SAT</td>
+	<td>2009</td>
+	<td>Constraints<br/>Vol. 14(2), pp. 254-272&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Tamura:CPAI:2008A" class="entry">
+	<td>Tamura, N., Tanjo, T. &amp; Banbara, M.</td>
+	<td>System Description of a SAT-based CSP Solver Sugar</td>
+	<td>2008</td>
+	<td>3rd International CSP Solver Competition, pp. 71-75&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Tamura:CPAI:2008B" class="entry">
+	<td>Tanjo, T., Tamura, N. &amp; Banbara, M.</td>
+	<td>Sugar++: A SAT-based MAX-CSP/COP Solver</td>
+	<td>2008</td>
+	<td>3rd International CSP Solver Competition, pp. 77-82&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Yokoo:IAT:2008A" class="entry">
+	<td>Tasaki, M., Yabu, Y., Iwanari, Y., Yokoo, M., Tambe, M., Marecki, J. &amp; Varakantham, P.</td>
+	<td>Introducing Communication in Dis-POMDPs with Locality of Interaction</td>
+	<td>2008</td>
+	<td>IEEE/WIC/ACM International Conference on Intelligent Agent Technology (IAT-2008), pp. 169-175&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Todo:WINE:2009" class="entry">
+	<td>Todo, T., Iwasaki, A. &amp; Yokoo, M.</td>
+	<td>Characterization of Strategy-proof, Revenue Monotone Combinatorial Auction Mechanisms and Connection with False-name-proofness</td>
+	<td>2009</td>
+	<td>fifth Workshop on Internet &amp; Network Economics (WINE-09), pp. 561-568&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="Todo:AAMAS:2009" class="entry">
+	<td>Todo, T., Iwasaki, A., Yokoo, M. &amp; Sakurai, Y.</td>
+	<td>Characterizing False-name-proof Allocation Rules in Combinatorial Auctions</td>
+	<td>2009</td>
+	<td>8th International Joint Conference on Autonomous Agents &amp; Multi-Agent Systems (AAMAS-2009), pp. 265-272&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+ <small>Created by <a href="http://jabref.sourceforge.net">JabRef</a> on 10/08/2010.</small>
+</p>
+
+</body>
+</html>
+
+<!-- File generated by JabRef; Export Filter written by Mark Schenk -->

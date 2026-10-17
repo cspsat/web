@@ -1,0 +1,262 @@
+body {
+    font-family:Arial;
+    margin:0px auto;
+    width:900px;
+    /* background-color:#e5e5c9; */
+    background-color:#800000;
+}
+
+div#content {
+    width:800px;
+    padding:50px;
+    padding-top:5px;
+    /* background-color:#e5e5c9; */
+    background-color:#ffffff;
+}
+
+div#postamble {
+    width:800px;
+    padding:10px 50px 50px 50px;
+    /* background-color:#e5e5c9; */
+    font-size:0.7em;
+    background-color:#ffffff;
+}
+
+div#postamble a {
+    padding:0px;
+    margin:0px;
+}
+
+.contents{
+    width:800px;
+    padding:50px;
+    padding-top:5px;
+    background-color:#FEFEFE
+}
+
+p {
+    line-height:1.5em;
+    padding-left:10px;
+}
+
+td {
+    vertical-align:middle;
+}
+
+th {
+    vertical-align:middle;    
+}
+
+td.break {
+    background-color:#f5f5d9;
+}
+
+td.menu {
+    line-height:1.5em;
+    text-align:center;
+    font-size:1em;
+    margin:0px;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+td.menu a {
+/*     color:#616161; */
+    color:#FFFFFF;
+    text-decoration:none;
+    display:block;
+    width:183px;
+    margin:0px;
+    padding:5px;
+}
+
+td.menu a:hover {
+/*     background-color:#c5e1ed; */
+    margin:0px;
+    color:#000000;
+}
+
+td.en_name {
+    width:140px;
+    line-height:1.5em;
+/*     height:50px; */
+    }
+td.en_post {
+    width:160px;
+    line-height:1.5em;
+/*     height:50px; */
+    }
+td.en_affi {
+    width:460px;
+    line-height:1.5em;
+/*     height:50px; */
+    }
+
+
+table {
+    border:none;
+    border-collapse:separate;    
+}
+
+table.mini {
+    border:0px;    
+    padding:0px;
+    font-size:0.8em;
+    margin-left:auto;
+    margin-right:0;
+    }
+
+td.mini {
+    text-align:right;
+}    
+
+
+td.button a {
+    text-decoration:none;
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px;  
+    background-color:#800000;
+    color:#FFFFFF;
+    display:block;
+    margin:0px;
+    padding:5px;
+    font-size:0.85em;
+    text-align:center;
+}
+
+td.button a:hover {
+/*     background-color:#c5e1ed; */
+    margin:0px;
+    color:#000000;
+}
+
+td.button_cspsat2 a {
+    text-decoration:none;
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px;  
+    background-color:#800000;
+    color:#FFFFFF;
+    display:block;
+    margin:0px;
+    padding:5px;
+    font-size:0.85em;
+    text-align:center;
+}
+
+td.button2_cspsat2 a:hover {
+/*     background-color:#c5e1ed; */
+    margin:0px;
+    color:#000000;
+}
+
+td.button2 a {
+    text-decoration:none;
+    margin:0px;
+    font-size:0.9em;
+    text-align:center;
+    border-width:0 0 0 1px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 0 5px 0 5px;
+    color:#000000;
+}
+
+td.button2 a:hover {
+/*     background-color:#c5e1ed; */
+    margin:0px;
+    color:#800000;
+}
+
+
+td.button3 a {
+    text-decoration:none;
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px;  
+    background-color:#3B5998;
+    color:#FFFFFF;
+    display:block;
+    margin:0px;
+    padding:5px;
+    font-size:0.85em;
+    text-align:center;
+}
+
+td.button3 a:hover {
+/*     background-color:#c5e1ed; */
+    margin:0px;
+    color:#000000;
+}
+
+
+
+table.member {
+    padding-left:10px;
+    font-size:1em;
+}
+
+dl {
+    padding-left: 10px;
+}
+
+h1.top {
+    margin-top:70px;
+    margin-bottom:30px;
+}
+
+h1.title {
+/*    border-color:#800000;
+    padding-top:30px;
+    padding-bottom:30px;
+    border-width:6px 0 6px 0;
+    border-style:solid; */
+}
+
+
+h2 {
+    padding-left:4px;
+    border-color:#800000;
+    border-width:2px 2px 2px 16px;
+    border-style:solid;
+}
+
+h3 {
+    padding-left:4px;
+    border-color:#800000;
+    border-width:0 0 0 12px;
+    border-style:solid;
+}
+
+dl.event {
+    padding: 10px 10px 0px 10px; 
+    /* border: 3px #800000 solid; */
+    /* #e5e5c9 */
+    /* background-color:#eaeace; */
+}
+
+
+p.date {
+    border-style:solid;
+    border-color:#800000;
+    border-width:3px 0 0 0;
+    padding:3px 0 0 0;
+    margin:0px;
+}
+
+p.author {
+    padding:0px;
+    margin:0px;
+}
+
+p.creator {
+    padding:0px;
+    margin:0px;
+}
+
+span.done {
+    color:green;
+}
+
+span.todo {
+    color:red;
+}

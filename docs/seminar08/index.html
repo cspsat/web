@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<!-- 2015-04-02 木 15:22 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Takehide Soh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../myhome.css"/>
+<script type="text/javascript" src="hide.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title"></h1>
+<style type="text/css">
+#table1 th { background-color: #3B5998; color: white;
+     border-style: solid; border-color: black; border-width: thin;
+     border: none;}
+#table1 td { background-color: #eeeeee; color: black;
+     border-style: solid; border-color: black; border-width: thin; border: none}
+#table1 td+td { background-color: #efefff; color: black;}
+#table1 td { text-align: left; background-color: #3B5998; color: white; width:120px;}
+#table1 td+td { text-align: left; width:680px; color: black;}
+h1#aa {
+    border-color:#3B5998;
+    border-width:4px 0px 4px 0px;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:30px;
+    border-style:solid;
+    font-size:1.7em;
+}
+</style>
+
+
+<h1 id="aa">
+第8回CSPSAT講演会
+</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">概要</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>会議名
+<ul class="org-ul">
+<li>第8回CSPSAT講演会
+</li>
+</ul>
+</li>
+<li>日程
+<ul class="org-ul">
+<li>2015年3月23日(月), 24日(火)
+</li>
+</ul>
+</li>
+<li>用務先
+<ul class="org-ul">
+<li>別府国際コンベンションセンター（ビーコンプラザ）会議室32
+</li>
+</ul>
+</li>
+<li>用務地
+<ul class="org-ul">
+<li>〒874-0828　大分県別府市山の手町12番1号
+</li>
+</ul>
+</li>
+<li>アクセス
+<ul class="org-ul">
+<li>JR別府駅から
+<ul class="org-ul">
+<li>バス5分 (3番のりば．路線3, 8にお乗りください．<a href="http://www.beppuni.com/bus/time_k/184_3.pdf">時刻表</a>)
+</li>
+<li>徒歩の場合は約20分 (1.3km)
+</li>
+</ul>
+</li>
+<li>会場・駅周辺のマップは <a href="https://www.google.com/maps/d/edit?mid=zSGhgWg48EDo.ks_ssZ2bZFkg">こちら</a> をご覧ください
+</li>
+<li>ビーコンプラザの<a href="http://www.b-conplaza.jp/access/">交通案内</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">プログラム</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">3月23日(月)</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">13:30 - 14:30</td>
+<td class="left"><b>SIG-FPAI 招待講演</b> モデル生成型定理証明系とSATソルバー</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">長谷川隆三（九州大学） <a href="../pdf2/cspsat2_seminar08_hasegawa.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">3月23日(月)</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">15:15 - 15:30</td>
+<td class="left">オープニング</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">15:30 - 16:10</td>
+<td class="left"><b>講演1</b> 　 離散構造処理系プロジェクトの主な研究成果と今後の展望 　</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">湊真一 (北海道大学) 　<a href="javascript:void(0)" onclick="hide('minato');">[概要]</a><div id="minato" style="display:none;"><br> 今年度までの5年間にわたってERATO湊離散構造処理系プロジェクトが実施され、BDD/ZDDを中心とした離散構造処理の技法とその応用に関する多くの研究成果が得られている。本講演では、離散構造処理系プロジェクトの主要な成果について説明するとともに、SATや制約プログラミング技術と関連する今後の課題について述べる。 </div> <a href="../pdf2/cspsat2_seminar08_minato.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">16:10 - 16:50</td>
+<td class="left"><b>講演2</b> 　メタレベル・アブダクションの論理　</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">井上克巳 (国立情報学研究所) 　<a href="javascript:void(0)" onclick="hide('inoue');">[概要]</a><div id="inoue" style="display:none;"><br> メタレベル・アブダクションは，因果性の論理に関するメタ公理を用いて，証明を補完し観測をメタレベルで説明するための手法として提案され，隠れ規則の発見や生体ネットワークの補完に応用されている．本研究では，メタレベル・アブダクション を一般化し，新たな公理系を与え，提案されている種々のアブダクションのパターンに関する解析を行う．</div> <a href="../pdf2/cspsat2_seminar08_inoue.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">16:50 - 17:10</td>
+<td class="left">20分休憩</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">17:10 - 17:50</td>
+<td class="left"><b>講演3</b> 　制約付きマッチングのメカニズムデザイン　　</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">横尾真 (九州大学) 　<a href="javascript:void(0)" onclick="hide('yokoo');">[概要]</a><div id="yokoo" style="display:none;">共同研究者名: 小島 武仁 (スタンフォード大)，田村 明久 (慶應大学)<br><br> マッチング理論は研修医と病院をマッチする研修医配属問題等の様々な応用問題を扱える一般的な枠組みであり，著名なメカニズムとしてDeferred Acceptance (DA) メカニズムがある．しかしながら，現実の問題では，マッチングの結果になんらかの制約条件が課せられることが通例であり，DAメカニズムをそのまま適用することはできない．本講演ではこのような制約付きマッチングでのメカニズム設計について解説する． </div> <a href="../pdf2/cspsat2_seminar08_yokoo.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">17:50 - 18:30</td>
+<td class="left"><b>講演4</b> 　制約充足問題のハイブリッド符号化のための枠組み　</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">田村直之 (神戸大学) 　<a href="javascript:void(0)" onclick="hide('tamura');">[概要]</a><div id="tamura" style="display:none;">共同研究者: 番原睦則，宋剛秀 (神戸大学)<br><br> 制約充足問題をSATあるいはPBに符号化する方法として，2進符号化，直接符号化，順序符号化など様々な方法が提案されている．しかし，各々の符号化には適不適があり，すべての制約充足問題に適した単一の符号化は存在していない．したがって，複数の符号化を混在させたハイブリッド符号化に関する研究が重要となる．そこで，本講演では上記の符号化を任意に組合せることが可能なハイブリッド符号化のための理論的な枠組みを提案する．</div> <a href="../pdf2/cspsat2_seminar08_tamura.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">19:00 -</td>
+<td class="left">懇親会</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="table1">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">3月24日(火)</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">09:30 - 10:10</td>
+<td class="left"><b>講演5</b> 　分散探索による船舶衝突回避　 　　　　</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">平山勝敏 (神戸大学) 　<a href="javascript:void(0)" onclick="hide('hirayama');">[概要]</a><div id="hirayama" style="display:none;">共同研究者: 金東均，沖本天太 (神戸大学)<br><br> 海上では意外なほど多くの船舶衝突事故が発生している．一般に船舶は運動性能が鈍くかつブレーキを持たない．そのため，特に３隻以上の船舶が互いにすれ違う複雑な状況では，衝突回避のために高度かつ迅速な判断を求められ，それが操船者への大きな負担となっている．本研究では，分散探索の技術を用いて衝突回避タスクを自動化することにより操船者の負担軽減を目指す．</div> <a href="../pdf2/cspsat2_seminar08_hirayama.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">10:10 - 10:50</td>
+<td class="left"><b>講演6</b> 　SAT ソルバーと動的簡単化手法　</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">鍋島英知 (山梨大学) 　<a href="javascript:void(0)" onclick="hide('nabeshima');">[概要]</a><div id="nabeshima" style="display:none;"><br> SAT 問題の簡単化は，SAT ソルバーの重要な要素技術の1つである．本講演では，SAT ソルバーにおいて頻繁に繰り返される処理に便乗して SAT 問題を簡単化する軽量な手法を紹介し，それを実装したソルバー GlueMiniSat の現状を報告する．</div> <a href="../pdf2/cspsat2_seminar08_nabeshima.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">10:50 - 11:10</td>
+<td class="left">20分休憩</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">11:10 - 11:50</td>
+<td class="left"><b>講演7</b> 　MGTPとQMaxSAT</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">越村三幸 (九州大学) 　<a href="javascript:void(0)" onclick="hide('koshimura');">[概要]</a><div id="koshimura" style="display:none;"><br> MGTPはモデル生成法に基づく一階述語論理の定理証明システムであり，極小モデル完全性を有する．本講演では，MGTPとCDCLベースのSATソルバーの関連性について述べるとともにMaxSATソルバーQMaxSATの現状について報告する．</div> <a href="../pdf2/cspsat2_seminar08_koshimura.pdf">[PDF]</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">11:50 - 12:00</td>
+<td class="left">クロージング</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">参加者</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+(順不同，敬称略．*印は講演会のみのご参加)
+</p>
+<ul class="org-ul">
+<li>北海道大学
+<ul class="org-ul">
+<li>湊真一
+</li>
+</ul>
+</li>
+<li>山梨大学
+<ul class="org-ul">
+<li>岩沼宏治, 鍋島英知, 福田翔士*, 黒岩健歩*, 杉本拓也, 渡辺大樹, 横前菜々子
+</li>
+</ul>
+</li>
+<li>国立情報学研究所
+<ul class="org-ul">
+<li>井上克巳
+</li>
+</ul>
+</li>
+<li>電気通信大学
+<ul class="org-ul">
+<li>戸田貴久
+</li>
+</ul>
+</li>
+<li>名古屋大学
+<ul class="org-ul">
+<li>酒井正彦, 橋本健二
+</li>
+</ul>
+</li>
+<li>神戸大学
+<ul class="org-ul">
+<li>平山勝敏, 田村直之, 番原睦則, 宋剛秀
+</li>
+</ul>
+</li>
+<li>徳山高専
+<ul class="org-ul">
+<li>力規晃
+</li>
+</ul>
+</li>
+<li>九州大学
+<ul class="org-ul">
+<li>長谷川隆三, 越村三幸, 横尾真, 査澳龍, 早田翔*, 上村直輝
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">懇親会情報</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>日時
+<ul class="org-ul">
+<li>2015年3月23日(月) 19:00 - 21:00
+</li>
+</ul>
+</li>
+<li>場所
+<ul class="org-ul">
+<li>ホテル白菊 (<a href="http://www.shiragiku.co.jp/index.html">http://www.shiragiku.co.jp/index.html</a>)
+</li>
+<li>住所: 〒874-0908 大分県別府市上田の湯町16-36
+</li>
+<li>TEL: 0977-21-2112
+</li>
+</ul>
+</li>
+<li>費用
+<ul class="org-ul">
+<li>教員 8,000円
+</li>
+<li>学生 5,000円
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">宿泊情報</h2>
+<div class="outline-text-2" id="text-5">
+</div><ul class="org-ul"><li><a id="sec-5-0-1" name="sec-5-0-1"></a>会場・懇親会の周辺ホテルマップ<br  /><div class="outline-text-4" id="text-5-0-1">
+<ul class="org-ul">
+<li><a href="https://www.google.com/maps/d/edit?mid=zSGhgWg48EDo.ks_ssZ2bZFkg">こちら</a> をご覧ください
+</li>
+<li>会場・懇親会場からは遠くなりますが，ビーコンプラザのHPにも宿泊施設
+の<a href="http://www.b-conplaza.jp/hotel/">紹介</a>があります．
+</li>
+</ul>
+</div>
+</li>
+
+<li><a id="sec-5-0-2" name="sec-5-0-2"></a>ホテル白菊<br  /><div class="outline-text-4" id="text-5-0-2">
+<ul class="org-ul">
+<li>懇親会の会場にもなっているホテル
+</li>
+<li>講演会場と駅の間
+</li>
+<li><a href="http://www.shiragiku.co.jp">http://www.shiragiku.co.jp</a>
+</li>
+<li>宿泊1名から
+</li>
+</ul>
+</div>
+</li>
+
+<li><a id="sec-5-0-3" name="sec-5-0-3"></a>花べっぷ<br  /><div class="outline-text-4" id="text-5-0-3">
+<ul class="org-ul">
+<li>懇親会場の隣にあるホテル
+</li>
+<li>講演会場と駅の間
+</li>
+<li><a href="http://www.hanabeppu.jp">http://www.hanabeppu.jp</a>
+</li>
+<li>宿泊2名から
+</li>
+</ul>
+</div>
+</li>
+
+<li><a id="sec-5-0-4" name="sec-5-0-4"></a>ホテル フジヨシ<br  /><div class="outline-text-4" id="text-5-0-4">
+<ul class="org-ul">
+<li>駅近/お手頃
+</li>
+<li><a href="http://www.hotelfujiyoshi.jp">http://www.hotelfujiyoshi.jp</a>
+</li>
+<li>宿泊1名から
+</li>
+</ul>
+</div>
+</li>
+
+<li><a id="sec-5-0-5" name="sec-5-0-5"></a>ビジネスホテルスター<br  /><div class="outline-text-4" id="text-5-0-5">
+<ul class="org-ul">
+<li>駅近/お手頃
+</li>
+<li><a href="http://www.hotel-star.jp">http://www.hotel-star.jp</a>
+</li>
+<li>宿泊1名から
+</li>
+</ul>
+</div>
+</li></ul>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">その他</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>遠方の方で，ハンドアウト等の配布物がありましたら，ファイル(PDF)と部数を宋までご連絡ください．
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Takehide Soh</p>
+<p class="date">Created: 2015-04-02 木 15:22</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.8)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

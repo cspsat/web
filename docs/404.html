@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSPSAT</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: #800000;
+    color: #222;
+  }
+  main {
+    background: #fff;
+    margin: 0;
+    padding: 48px 40px 64px;
+    min-height: 50vh;
+  }
+  h1 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+  p { line-height: 1.6; }
+  a { color: #800000; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="message">pdf が必要なひとは宋まで連絡してください。</h1>
+  <p id="english">If you need the PDF, please contact Takehide Soh.</p>
+  <p><a id="home" href="/web/">CSPSAT トップへ</a></p>
+</main>
+<script>
+(function () {
+  var segs = location.pathname.split("/").filter(Boolean);
+  var onProjectSite = location.hostname.endsWith(".github.io") && segs[0] === "web";
+  var base = onProjectSite ? "/web/" : "/";
+  document.getElementById("home").setAttribute("href", base);
+
+  var restricted = /\/(pdf|pdf2|pdf3|pdf-close)(\/|$)/.test(location.pathname);
+  if (!restricted) {
+    document.title = "Page not found";
+    document.getElementById("message").textContent = "ページが見つかりません。";
+    document.getElementById("english").textContent = "Page not found.";
+  }
+})();
+</script>
+</body>
+</html>
