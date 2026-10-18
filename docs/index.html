@@ -1,448 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<!-- 2019-08-12 月 16:27 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Takehide Soh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" type="text/css" href="cspsat3.css" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSPSAT プロジェクト</title>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-<div id="content">
-<style type="text/css">
-#news td    { width:15% }
-#news td+td    { width:80% }
-</style>
-<h1 class="top"><a href="index.html"><img src="cspsat3.png" alt="CSPSAT3" border="0" width="300px"></a></h1>
-
-<table class="mini">
-<tr>
-  <td colspan="3" align="right">
-    <script language="JavaScript">
-    </script>
-  </td>
-</tr>
-<tr>
-  <td width="100px"></td>
-  <td class="mini"><a href="en/index.html">English</a> | Japanese</td>
-  <td class="button"><a href="cspsat.html">CSPSAT<br>(until FY2011)</a></td>
-  <td class="button"><a href="cspsat2.html">CSPSAT2<br>(until FY2014)</a></td>
-  <td class="button"><a href="cloud/index.html">Cloud<br>(until FY2015)</a></td>
-  <td class="button3"><a href="http://kaminari.scitec.kobe-u.ac.jp/project/cspasp/">CSPASP<br>(since FY2015)</a></td>
-</tr>
-</table>
-
-<table class="menu" border="0" cellspacing="5" cellpadding="0" width="800px">
-  <tr>
-    <td class="menu" bgcolor="#800000"><a href="index.html">ニュース</a></td>
-    <td class="menu" bgcolor="#800000"><a href="project-cs3.html">プロジェクト概要</a></td>
-    <td class="menu" bgcolor="#800000"><a href="mtgsem-cs3.html">講演会<br>＆研究会</a></td>
-    <td class="menu" bgcolor="#800000"><a href="accomp-cs3.html">研究成果物<br>(論文・ソフトウェア等)</a></td>
-  </tr>
-</table>
-
-<div id="outline-container-org6f604a0" class="outline-2">
-<h2 id="org6f604a0">ニュース</h2>
-<div class="outline-text-2" id="text-org6f604a0">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" id="news">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">2019年8月1日</td>
-<td class="org-left">第12回CSPSAT講が2019年8月28,29日に開催されます (<a href="seminar12/index.html">URL</a>).</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2019年2月15日</td>
-<td class="org-left">第7回CSPSAT3研究会が2019年3月15日(金)に開催されます (<a href="mtg307/index.html">URL</a>).</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2018年9月18日</td>
-<td class="org-left">第6回CSPSAT3研究会が2018年10月18日(木), 19日(金)に開催されます (<a href="mtg306/index.html">URL</a>).</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2018年3月5日</td>
-<td class="org-left">第5回CSPSAT3研究会が2018年3月29日(木), 30日(金)に開催されます (<a href="http://kaminari.istc.kobe-u.ac.jp/project/cspsat/kakenhi_mtg05.html">URL</a>).</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2017年10月5日</td>
-<td class="org-left">第11回 CSPSAT &amp; ASP 講演会の日程が2017年11月14日(火), 15日(水)に決定しました (<a href="http://kaminari.istc.kobe-u.ac.jp/project/cspsat/cspsat_seminar11.html">URL</a>)．ASP 研究の世界的第一人者である Torsten Schaub 先生にご講演頂く予定です．</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2017年7月21日</td>
-<td class="org-left">第4回CSPSAT3研究会が2017年8月7日(月), 8日(火)に開催されます (<a href="mtg304/index.html">URL</a>).</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2017年1月19日</td>
-<td class="org-left">第3回CSPSAT3研究会が2017年3月15日(水), 16日(木)に開催されます (<a href="mtg303/index.html">URL</a>).</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2016年6月2日</td>
-<td class="org-left">第10回CSPSAT講演会の日程が2016年11月14日(月), 15日(火)に決定しました (<a href="seminar10/index.html">URL)</a>．Eclipseに採用されたSat4jの開発者である Daniel Le Berre 先生にご講演頂く予定です.</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">2016年4月7日</td>
-<td class="org-left">CSPSAT3のページを公開しました!</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">過去の関連プロジェクトについては <a href="cspsat.html">CSPSAT</a>, <a href="cspsat2.html">CSPSAT2</a>, <a href="cloud/index.html">Cloud</a> を御覧ください．</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">制約解集合プログラミングに関する <a href="http://kaminari.scitec.kobe-u.ac.jp/project/cspasp/">CSPASP</a> も現在進行中です!</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-orgaaa7a54" class="outline-2">
-<h2 id="orgaaa7a54">バックナンバー</h2>
-<div class="outline-text-2" id="text-orgaaa7a54">
-<ul class="org-ul">
-<li><a href="cspsat2.html">CSPSAT2とクラウド (2012-2015年度) のニュース</a></li>
-<li><a href="news2011.html">2011年度ニュース</a></li>
-<li><a href="news2010.html">2010年度ニュース</a></li>
-<li><a href="news2009.html">2009年度ニュース</a></li>
-<li><a href="news2008.html">2008年度ニュース</a></li>
-</ul>
-
-<div class="HTML">
-<p>
-
-</p>
-
-<p>
-&lt;hr&gt;
-&lt;!&#x2013; &lt;img width=&ldquo;20%&rdquo; src=&ldquo;banbara.png&rdquo;&gt;&lt;br&gt; &#x2013;&gt;
-&lt;font size=&ldquo;-1&rdquo;&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img width=&ldquo;150px&rdquo; src=&ldquo;soh.png&rdquo;&gt;&lt;/td&gt;
-&lt;td class=&ldquo;button2&rdquo;&gt;&lt;a href=&ldquo;http://www.edu.kobe-u.ac.jp/istc-tamlab/&rdquo;&gt;Tamura Lab.&lt;/a&gt;&lt;a href=&ldquo;<a href="http://kix.istc.kobe-u.ac.jp/~soh/jp/">http://kix.istc.kobe-u.ac.jp/~soh/jp/</a>&rdquo;&gt;T. Soh&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/font&gt;
-&lt;img src=&ldquo;<a href="http://cgi.center.kobe-u.ac.jp:8000/cgi-bin/Count.cgi?df=svc00652-cspsat.dat%7Cdd=C">http://cgi.center.kobe-u.ac.jp:8000/cgi-bin/Count.cgi?df=svc00652-cspsat.dat%7Cdd=C</a>&rdquo; align=absmiddle&gt;
-&lt;font size=&ldquo;-1&rdquo;&gt;since 24th March 2009&lt;/font&gt;
-</p>
-
-<p>
-&lt;/div&gt;
-&lt;script type=&ldquo;text/javascript&rdquo;&gt;
-</p>
-
-<p>
-var _gaq = _gaq || [];
-_gaq.push([&rsquo;_setAccount&rsquo;, &rsquo;UA-6313627-3&rsquo;]);
-_gaq.push([&rsquo;_trackPageview&rsquo;]);
-</p>
-
-<p>
-(function() {
-  var ga = document.createElement(&rsquo;script&rsquo;); ga.type = &rsquo;text/javascript&rsquo;; ga.async = true;
-  ga.src = (&rsquo;https:&rsquo; == document.location.protocol ? &rsquo;https://ssl&rsquo; : &rsquo;http://www&rsquo;) + &rsquo;.google-analytics.com/ga.js&rsquo;;
-  var s = document.getElementsByTagName(&rsquo;script&rsquo;)[0]; s.parentNode.insertBefore(ga, s);
-})();
-</p>
-
-<p>
-&lt;/script&gt;
-</p>
-
-</div>
-</div>
-</div>
-</div>
+  <header class="banner">
+    <div class="wrap">
+      <h1>CSPSAT プロジェクト</h1>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <p class="lead">制約充足問題と制約最適化問題を SAT に符号化して解く研究を，2008年度からの一連の共同研究として進めてきた．CSPSAT では SAT 変換と並列ソルバーを，CSPSAT2 ではソフト制約や動的な制約変更への拡張を中心に扱い，その後，制約解集合プログラミングを扱う CSPASP，クラウド上のソフトウェア配置を扱う NII 共同研究，NP を超える問題への拡張を目指す CSPSAT3 へと続いている．各プロジェクトのページと，そこで開かれた講演会・研究会を古い順に示す．</p>
+      <ul class="projects">
+        <li>
+          <a href="cspsat.html">CSPSAT</a> <span class="years">2008–2012</span>
+          <ul>
+            <li><a href="mtg01/index.html">第1回CSPSAT研究会</a>，神戸大学 六甲台，2008年8月21日–22日</li>
+            <li><a href="mtg02/index.html">第2回CSPSAT研究会</a>，国立情報学研究所，2008年12月1日–2日</li>
+            <li><a href="mtg03/index.html">第3回CSPSAT研究会</a>，九州大学西新プラザ，2009年3月12日–14日</li>
+            <li><a href="mtg04/index.html">第4回CSPSAT研究会</a>，ホテルニューアワジ（南あわじ市），2009年7月28日–30日</li>
+            <li><a href="mtg05/index.html">第5回CSPSAT研究会</a>，レイクランドホテルみづのさと（富士河口湖町），2009年11月30日–12月2日</li>
+            <li><a href="seminar01/index.html">第1回CSPSAT講演会</a>，神戸大学 六甲台，2010年2月4日</li>
+            <li><a href="mtg06/index.html">第6回CSPSAT研究会</a>，鹿児島県市町村自治会館，2010年3月28日–30日</li>
+            <li><a href="mtg07/index.html">第7回CSPSAT研究会</a>，横谷温泉旅館（茅野市），2010年7月26日–28日</li>
+            <li><a href="seminar02/index.html">第2回CSPSAT講演会</a>，神戸大学 六甲台，2010年11月8日–9日</li>
+            <li><a href="mtg08/index.html">第8回CSPSAT研究会</a>，九州大学西新プラザ，2010年12月21日–23日</li>
+            <li><a href="mtg09/index.html">第9回CSPSAT研究会</a>，神戸大学 六甲台，2011年3月17日–19日</li>
+            <li><a href="mtg10/index.html">第10回CSPSAT研究会</a>，九州大学西新プラザ，2011年8月17日–19日</li>
+            <li><a href="seminar03/index.html">第3回CSPSAT&amp;ASP講演会</a>，神戸大学 六甲台，2011年11月21日–22日</li>
+            <li><a href="mtg11/index.html">第11回CSPSAT研究会</a>，下呂市民会館，2011年11月30日–12月2日</li>
+            <li><a href="mtg12/index.html">第12回CSPSAT研究会</a>，湯布院公民館，2012年3月19日–21日</li>
+            <li><a href="seminar04/index.html">第4回CSPSAT&amp;ASP講演会</a>，神戸大学 六甲台，2012年5月21日–22日</li>
+          </ul>
+        </li>
+        <li>
+          <a href="cspsat2.html">CSPSAT2</a> <span class="years">2012–2016</span>
+          <ul>
+            <li><a href="seminar04/index.html">第4回CSPSAT&amp;ASP講演会</a>，神戸大学 六甲台，2012年5月21日–22日</li>
+            <li><a href="mtg201/index.html">第1回CSPSAT2研究会</a>，千光寺山荘（尾道市），2012年7月12日–13日</li>
+            <li><a href="seminar05/index.html">第5回CSPSAT&amp;ASP講演会</a>，神戸大学 六甲台，2012年10月11日–12日</li>
+            <li><a href="mtg202/index.html">第2回CSPSAT2研究会</a>，唐津市民交流プラザ，2013年3月14日–15日</li>
+            <li><a href="seminar06/index.html">論理と推論の理論，実装，応用に関する合同セミナー</a>，北海道大学，2013年7月24日–25日</li>
+            <li><a href="mtg203/index.html">第3回CSPSAT2研究会</a>，北海道大学，2013年7月26日</li>
+            <li><a href="mtg204/index.html">NIIグランドチャレンジ・NII共同研究・CSPSAT2 合同セミナー</a>，いへや愛ランドよねざき（伊平屋村），2014年3月13日–14日</li>
+            <li><a href="seminar07/index.html">第7回CSPSAT講演会</a>，神戸大学 六甲台，2014年4月22日–23日</li>
+            <li><a href="mtg205/index.html">第5回CSPSAT2研究会</a>，神戸大学 六甲台，2014年8月21日–22日</li>
+            <li><a href="seminar08/index.html">第8回CSPSAT講演会</a>，別府国際コンベンションセンター，2015年3月23日–24日</li>
+            <li><a href="seminar09/index.html">第9回CSPSAT講演会</a>，神戸大学 六甲台，2016年1月22日</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://web.archive.org/web/20180802153142/http://kaminari.scitec.kobe-u.ac.jp/project/cspasp/">CSPASP</a> <span class="years">2015–2018</span>
+          <ul>
+            <li>第1回 科研費・NII共同研究 合同会合，神戸大学 深江，2015年5月25日–26日</li>
+            <li>第2回 科研費会合，神戸大学 六甲台，2015年7月22日–23日</li>
+            <li>第2回 NII共同研究会合，神戸大学 六甲台，2015年8月3日–4日</li>
+            <li>第3回 NII共同研究会合，神戸大学 六甲台，2015年11月16日</li>
+            <li>第4回 NII共同研究会合，国立情報学研究所，2015年12月14日</li>
+            <li>第3回 科研費・第5回 NII共同研究 合同会合，神戸大学 六甲台，2015年12月21日–22日</li>
+            <li><a href="cloud/cld04.html">第6回 NII共同研究会合</a>，熊本市民会館，2016年3月28日–29日</li>
+            <li><a href="mtg301/index.html">第4回 科研費会合</a>，神戸大学 深江・六甲台，2016年6月1日–2日</li>
+            <li>第5回 科研費会合，神戸大学 六甲台，2016年7月29日</li>
+            <li>第6回 科研費会合，神戸大学 六甲台，2016年12月2日</li>
+            <li><a href="mtg303/index.html">第3回CSPSAT3研究会・第7回CSPASP研究会 合同研究会</a>，神戸大学 六甲台，2017年3月15日–16日</li>
+            <li>第7回 NII共同研究会合，国立情報学研究所，2017年4月21日</li>
+            <li>第8回 NII共同研究会合，神戸大学 六甲台，2017年5月11日–12日</li>
+            <li>第9回 NII共同研究会合，神戸大学 六甲台，2017年5月26日</li>
+            <li>第7回 科研費会合，神戸大学 深江，2017年7月10日–11日</li>
+            <li><a href="mtgsem-cs3.html#org09fb3ed">第11回 CSPSAT &amp; ASP 講演会</a>，神戸大学 六甲台，2017年11月14日–15日</li>
+            <li>第10回 NII共同研究会合，神戸大学 六甲台，2017年11月15日</li>
+            <li>第11回 NII共同研究会合，神戸大学 六甲台，2018年3月23日–24日</li>
+          </ul>
+        </li>
+        <li>
+          <a href="cloud/index.html">クラウド上のソフトウェア最適配置問題の解法</a> <span class="years">2015–2016</span>
+          <ul>
+            <li><a href="cloud/index.html#sec-3-1">第1回全体会合</a>，神戸大学 六甲台，2015年7月22日–23日</li>
+            <li><a href="cloud/cld02.html">第2回全体会合</a>，神戸大学 六甲台，2015年12月3日–4日</li>
+            <li><a href="cloud/index.html#sec-3-2">個別会合</a>，アルトワ大学（ランス），2016年1月12日–13日</li>
+            <li><a href="cloud/cld03.html">第3回会合</a>，神戸大学 六甲台，2016年2月5日</li>
+            <li><a href="cloud/cld04.html">第4回全体会合</a>，熊本市民会館，2016年3月28日–29日</li>
+          </ul>
+        </li>
+        <li>
+          <a href="cspsat3.html">CSPSAT3</a> <span class="years">2016–2019</span>
+          <ul>
+            <li><a href="mtg301/index.html">第1回CSPSAT3研究会</a>，神戸大学 深江・六甲台，2016年6月1日–2日</li>
+            <li><a href="seminar10/index.html">第10回CSPSAT講演会</a>，神戸大学 六甲台，2016年11月14日–15日</li>
+            <li><a href="mtg302/index.html">第2回CSPSAT3研究会</a>，神戸大学 六甲台，2016年12月19日</li>
+            <li><a href="mtg303/index.html">第3回CSPSAT3研究会・第7回CSPASP研究会 合同研究会</a>，神戸大学 六甲台，2017年3月15日–16日</li>
+            <li><a href="mtg304/index.html">第4回CSPSAT3研究会</a>，神戸大学 六甲台，2017年8月7日–8日</li>
+            <li><a href="mtgsem-cs3.html#org09fb3ed">第11回 CSPSAT &amp; ASP 講演会</a>，神戸大学 六甲台，2017年11月14日–15日</li>
+            <li><a href="mtgsem-cs3.html#org68a8672">第5回CSPSAT3研究会</a>，神戸大学 六甲台，2018年3月29日–30日</li>
+            <li><a href="mtg306/index.html">第6回CSPSAT3研究会</a>，神戸大学 六甲台，2018年10月18日–19日</li>
+            <li><a href="mtg307/index.html">第7回CSPSAT3研究会</a>，神戸大学 六甲台，2019年3月15日</li>
+            <li><a href="seminar12/index.html">第12回CSPSAT講演会</a>，神戸大学 六甲台，2019年8月28日–29日</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </main>
 </body>
 </html>
